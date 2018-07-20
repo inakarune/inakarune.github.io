@@ -383,40 +383,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>자바스크립트는 클래스가 없으며 함수(function)는 일급객체(first-class object)이다.</p>
-<h3 id="일급객체"><a href="#일급객체" class="headerlink" title="일급객체"></a>일급객체</h3><ul>
-<li>변수나 데이터 구조 안에 담을 수 있다.</li>
-<li>인자로 전달할 수 있다.</li>
-<li>반환 값(return value)으로 사용할 수 있다.</li>
-<li>런타임에 생성할 수 있다.</li>
-<li>할당에 사용된 이름과 관계없이 고유하게 식별할 수 있다.</li>
-</ul>
-<h3 id="패턴이란"><a href="#패턴이란" class="headerlink" title="패턴이란?"></a>패턴이란?</h3><p>소프트웨어 개발에서의 패턴이란 일반적인 문제에 대한 해결책을 가리킨다. </p>
-<ul>
-<li>검증된 실행 방법을 사용하여 쓸데없이 시간을 낭비하지 않고 더 나은 코드를 작성할 수 있게 도와준다.</li>
-<li>패턴은 일정 정도의 추상화 단계를 제공한다. 복잡한 문제를 고민할 때는 저수준의 세부 사항에 신경쓰지 않아도 되도록, 자기 완결성을 갖춘 구성요소(패턴)들을 사용하여 설명하는 것이 도움된다.</li>
-<li>개발자와 팀 간의 커뮤니케이션에 도움된다.</li>
-</ul>
-<p>패턴 종류</p>
-<ul>
-<li>디자인 패턴(싱글톤, 팩터리, 장식자, 감시자): 엄격한 자료형 언어의 관점, 자바, C++.</li>
-<li>코딩 패턴: 함수의 다양한 활용과 같은 자바스크립트의 독특한 기능</li>
-<li>안티패턴: 버그, 코딩 에러가 아닌 오류를 더 많이 일으킬 수 있는 흔히 잘못 사용하는 접근 방법</li>
-</ul>
-<p>자바스크립트는 객체 지향 언어다.<br>원시 데이터 타입(number, string, boolean, null, undefined) 뿐만 아니라 함수 또한 객체이다.<br>자바스크립트에서 변수를 선언한다면 이미 객체를 다루고 있는 것이다.</p>
-<ul>
-<li>변수는 자동으로 활성화 객체(Activation Object)라 불리는 내부적인 객체의 프로퍼티가 된다(전역 변수인 경우에는 전역 객체의 프로퍼티가 된다).</li>
-<li>변수는 자신만의 프로퍼티를 가지기 때문에 실제로 객체와 비슷하다. 변수의 프로퍼티를 어트리뷰트(attribute)라고 한다.</li>
-</ul>
-<p>코딩 기초</p>
-<ul>
-<li>유지보수 가능한 코드 작성(읽기 쉽다, 일관적이다, 예측 가능하다, 한 사람이 작성한 것처럼 보인다, 문서화되어 있다)</li>
-<li>전역 변수의 사용을 최소화</li>
-<li>var 선언은 한번만 사용</li>
-<li>loop 내에서 length는 캐시해두고 사용</li>
-<li>코딩 규칙을 준수</li>
-</ul>
-
+        
     </article>
     <!-- license  -->
     
@@ -430,6 +397,11 @@ height:50vh;
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/07/20/Pattern-studying/" title= Pattern studying >
+                    <div class="nextTitle">Pattern studying</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -544,7 +516,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#일급객체"><span class="toc-number">1.</span> <span class="toc-text">일급객체</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#패턴이란"><span class="toc-number">2.</span> <span class="toc-text">패턴이란?</span></a></li></ol>
+        
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -764,12 +736,7 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 16 </div>
+    <div class="total-archive"> Total : 17 </div>
     
     <div class="post-archive">
     
@@ -778,6 +745,11 @@ top:50vh;
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/20</span><a class="archive-post-title" href= "/2018/07/20/Pattern-studying/" >Pattern studying</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -816,22 +788,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Kotlin-Basic/" >Kotlin Basic</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/About-responsive-web/" >About responsive web</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
         </li>
     
     
@@ -841,7 +803,17 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/About-responsive-web/" >About responsive web</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/App-Lifecycles/" >App Lifecycles</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
         </li>
     
     
@@ -851,18 +823,20 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/hello-world/" >Hello World</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/1/" >에라이</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/1/" >에라이</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/hello-world/" >Hello World</a>
         </li>
     
     </div>
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="html"><span class="iconfont-archer">&#xe606;</span>html</span>
     
         <span class="sidebar-tag-name" data-tags="aws"><span class="iconfont-archer">&#xe606;</span>aws</span>
     
@@ -875,8 +849,6 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="deploy"><span class="iconfont-archer">&#xe606;</span>deploy</span>
     
         <span class="sidebar-tag-name" data-tags="kotlin"><span class="iconfont-archer">&#xe606;</span>kotlin</span>
-    
-        <span class="sidebar-tag-name" data-tags="html"><span class="iconfont-archer">&#xe606;</span>html</span>
     
         <span class="sidebar-tag-name" data-tags="javascript"><span class="iconfont-archer">&#xe606;</span>javascript</span>
     
@@ -913,11 +885,11 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
+        <span class="sidebar-category-name" data-categories="html"><span class="iconfont-archer">&#xe60a;</span>html</span>
+    
         <span class="sidebar-category-name" data-categories="aws"><span class="iconfont-archer">&#xe60a;</span>aws</span>
     
         <span class="sidebar-category-name" data-categories="kotlin"><span class="iconfont-archer">&#xe60a;</span>kotlin</span>
-    
-        <span class="sidebar-category-name" data-categories="html"><span class="iconfont-archer">&#xe60a;</span>html</span>
     
         <span class="sidebar-category-name" data-categories="javascript"><span class="iconfont-archer">&#xe60a;</span>javascript</span>
     
