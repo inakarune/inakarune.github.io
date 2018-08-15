@@ -383,7 +383,8 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <p>Rail Model(사용자 중심 성능 모델)<br>• Response : 100ms이내에 응답<br>• Animate : 16ms(브라우저가 새 프레임을 화면에 만드는 시간을 계산한다면 코드는 10ms이내에 실행을 마쳐야 함)<br>• Idle : 50ms<br>• Load : 1 second(1초 내로 사이트를 로드)<br>• 성능(퍼포먼스) 개선 노력의 초점을 사용자에게 맞춰야 한다. 성능 지연을 사용자가 어떻게 받아들이는지 파악.<br>Rail more detail(<a href="https://developers.google.com/web/fundamentals/performance/rail?hl=ko" target="_blank" rel="noopener">https://developers.google.com/web/fundamentals/performance/rail?hl=ko</a>)<br>critial rendering path를 위해 최적화하는 건 매우 중요하다.<br>post-load idle state일 동안 하면 좋을 task는?<br>• image assets : 이미지는 대개 크기 때문에 idle state일 때 load하는 건 나쁘지 않다.<br>• videos : 유저들이 비디오를 보고 싶어할 때 idle state에서 동영상을 불러오는 건 좋은 생각이 될 수 있다.<br>• comment section<br>사람들은 뉴스를 보러 방문하기 때문에 이상적으로 스토리는 이미 로드되어야 한다.<br>Animate(FLIP: CSS transform을 사용하여 높은 퍼포먼스 애니메이션을 설정하는 기술)<br>• First : 애니메이션 효과가 어디서 시작하고<br>• Last : 어디서 끝나는지<br>• Invert<br>• Play<br>user click -&gt; animation start 까지 100ms<br>animation start -&gt; animation end 까지 60프레임<br>animation end -&gt; user가 애니메이션 종료를 지각할 때까지 50 ~ 100ms<br>• 어떻게 opacity와 transform만 를 트리거하는지 확인하자. 퍼포먼스가 좋은 앱을 만들 때 이를 명심하기.<br>60프레임 애니메이션을 요구하는 interaction<br>• spinner<br>• scrolling<br>• drag &amp; drop<br>• pinching<br>• pull to refresh<br>• opening comment<br>• side menu slide<br>• request에 추가 오버헤드가 더해질 수도 있지만 16ms 이상 걸릴 수도 있다.<br>~ 50ms post-load idle단계에서 어떤 작업을 해낼 수 있을까?<br>• 유저가 도달 할 때까지 준비가 될 수 있도록 스크롤해야 볼 수있는 부분부터 요청을 시작할 수 있다.<br>• 스크롤해야 볼 수있는 콘텐츠와 마찬가지로 초기 페이지가 로드 된 후에도 이미지를 요청할 수 있다.<br>• 스크롤없이 볼 수있는 부분의 이미지를 확인한다. 이미 다운로드하여 표시해야한다.<br>• app이 약간의 downtime을 갖지만, FLIP 애니메이션을 미리 계산한다.</p>
+
     </article>
     <!-- license  -->
     

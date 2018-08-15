@@ -383,7 +383,13 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <p>왜 1초당 60프레임에 신경써야 하는지?<br>1초에 60프레임<br>1프레임당 16ms가 랜더링하는데 소요된다.<br>Making a frame<br>랜더트리(Render tree)는 DOM과 비슷하지만 몇몇 점이 다르다.<br>예를 들어 element에 적용한 css가 display: none이라면 랜더 트리에 나타나지 않는다.<br>javascript -&gt; style -&gt; layout -&gt; paint -&gt; composite<br>• javascript or web animation api, css animation</p>
+<ol>
+<li>css나 javascript 같은 visual change를 할 때<br>• 브라우저는 영향을 받는 element의 style을 재계산한다.<br>• width나 height 등일 때 브라우저는 모든 element의 요소를 체크하고 페이지를 reflow할 것이다.<br>• 영향을 받는 모든 영역은 repaint가 필요하게 될 것이다.<br>• 마지막으로 페인트한 element들은 합쳐지게 될 것이다.</li>
+<li>paint property만 change할 때(ex. background-image, text-color, shadow)<br>• javascript로 change를 만들고<br>• style을 계산하고<br>• layout은 건너뛴다. 왜냐하면 어떤 element도 change가 일어나지 않았기 때문.<br>• paint를 하고<br>• 마지막으로 합친다</li>
+<li>paint change는 없고 layout만 change할 때<br>• javascript로 change를 만들고<br>• style을 계산하고<br>• 마지막으로 합친다<br>CSS(paint, layout, composite)가 렌더링 파이프 라인에 영향을 주는 방식을 이해하는 것은 뛰어난 성능을 향한 큰 발걸음이다.<br>css research<br>csstriggers.com으로 css property에 따른 pipeline 변화를 확인해본다.<br>예를 들어<br>• layout, paint, composite = margin-left<br>• paint, composite = color<br>composite = transform</li>
+</ol>
+
     </article>
     <!-- license  -->
     
