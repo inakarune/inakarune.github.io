@@ -384,6 +384,15 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <p>생성자 함수가 초기화를 한다 -&gt; 객체의 초기화를 한다(코드의 재활용성이 대폭 늘어난다.)<br>생성자 함수는 일반함수와 구분짓기 위해 첫글자를 대문자로 표시한다.<br>object는 모든 객체의 부모 즉, 최상위 객체이다.(window보다는 아래)<br>object.prototype은 모든 객체들의 프로토타입이 된다.<br>모든 객체가 공통적으로 사용할 수 있는 기능인 것이다.<br>모든 객체의 최초의 조상 Object -&gt; prototype -&gt; 일반 객체들(프로토타입 체인을 생각하는 게 쉽다)<br>object는 객체의 가장 기본적인 형태를 가지고 있는 객체.<br>즉 아무것도 상속받지 않은 순수한 객체이다.<br>자바스크립트에서 값을 저장하는 가장 기본적인 단위이다.</p>
+<p>코드 중복은 좋지 않다. 악취 남.</p>
+<ol>
+<li>코드의 양이 많아진다.</li>
+<li>유지보수가 어렵다.</li>
+<li>코드메모리를 잡아먹는다.</li>
+</ol>
+<p>때문에 각기 다른 곳에서 재활용할 수 있는, 여러 같은 코드를 만들 필요성으로 생성자 함수(constructor function)의 필요성.<br>객체의 구조를 재활용할 수 있는 방법이 필요하다.<br>그 때 사용하는 게 생성자 함수이다.</p>
+<p>new keyword<br>빈 객체 new + 함수 =&gt; 생성자 함수<br>function Person() {}<br>var p = new Person();<br>new로 인해 빈 객체를 반환한다.</p>
+<p>var p = {} 와 같다고 볼 수 있다.</p>
 
     </article>
     <!-- license  -->
