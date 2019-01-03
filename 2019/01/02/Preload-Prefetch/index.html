@@ -384,7 +384,19 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <p>preload, prefetch의 차이점</p>
-<p>preload는 선언전 fetch.<br>document의 onload event를 막지 않으면서 브라우저가 자원을 요청하도록 강제할 수 있다.<br>prefetch는 자원이 필요할 수도 있다는 것을 브라우저에게 힌트를 주지만 로딩할 지 말지는 브라우저가 결정하게 한다.</p>
+<p>preload는 선언전 fetch.</p>
+<p>document의 onload event를 막지 않으면서 브라우저가 자원을 요청하도록 강제할 수 있다.</p>
+<p>prefetch는 자원이 필요할 수도 있다는 것을 브라우저에게 힌트를 주지만 로딩할 지 말지는 브라우저가 결정하게 한다.</p>
+<p>현재 페이지에서 사용될 거라 확신이 드는 자원들은 preload하라. </p>
+<p>미래의 여러 navigation boundaries에서 사용될 거라 생각되는 자원들은 prefetch하라.</p>
+<p>preload는 브라우저에게 페이지에서 필요한 자원을 일찍 fetch하라고 알린다.</p>
+<p>주로 preload에 사용되는 것 -&gt; (key scripts, web fonts, hero images)</p>
+<p>prefetch는 받아온 요청이나 리소스가 유저의 다음 navigation(예를 들어 다른 뷰나 페이지 사이)에까지 지속되어야 한다. </p>
+<p>만약 page A가 page B에 꼭 필요한 자원을 prefetch하는 요청을 날리는 경우, 중요한 리소스와 navigation requests는 병행으로 수행될 수 있다. 만약에 이 경우 preload를 사용한다면 즉시 page A의 unload가 취소될 것이다.</p>
+<p>크롬에는 네 가지 캐시가 있다.</p>
+<p>HTTP cache, memory cache, service worker cache &amp; push cache</p>
+<p>preload, precache된 자원은 모두 http cache에 저장된다.</p>
+<p>flash-of-invisible text problem</p>
 
     </article>
     <!-- license  -->
@@ -920,6 +932,10 @@ top:50vh;
     
     
     
+    
+    
+    
+    
     <div class="total-archive"> Total : 30 </div>
     
     <div class="post-archive">
@@ -951,7 +967,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/apply-bind-call/" >apply, bind, call</a>
         </li>
     
     
@@ -961,7 +977,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/apply-bind-call/" >apply, bind, call</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
         </li>
     
     
@@ -1046,12 +1062,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Kotlin-Basic/" >Kotlin Basic</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Kotlin-Basic/" >Kotlin Basic</a>
         </li>
     
     
@@ -1071,12 +1087,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/The-Critical-Rendering-Path/" >The Critical Rendering Path </a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/The-Critical-Rendering-Path/" >The Critical Rendering Path </a>
         </li>
     
     
@@ -1096,8 +1112,6 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="html"><span class="iconfont-archer">&#xe606;</span>html</span>
     
-        <span class="sidebar-tag-name" data-tags="kotlin"><span class="iconfont-archer">&#xe606;</span>kotlin</span>
-    
         <span class="sidebar-tag-name" data-tags="aws"><span class="iconfont-archer">&#xe606;</span>aws</span>
     
         <span class="sidebar-tag-name" data-tags="angular"><span class="iconfont-archer">&#xe606;</span>angular</span>
@@ -1107,6 +1121,8 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
     
         <span class="sidebar-tag-name" data-tags="deploy"><span class="iconfont-archer">&#xe606;</span>deploy</span>
+    
+        <span class="sidebar-tag-name" data-tags="kotlin"><span class="iconfont-archer">&#xe606;</span>kotlin</span>
     
         <span class="sidebar-tag-name" data-tags="javascript"><span class="iconfont-archer">&#xe606;</span>javascript</span>
     
@@ -1145,9 +1161,9 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="html"><span class="iconfont-archer">&#xe60a;</span>html</span>
     
-        <span class="sidebar-category-name" data-categories="kotlin"><span class="iconfont-archer">&#xe60a;</span>kotlin</span>
-    
         <span class="sidebar-category-name" data-categories="aws"><span class="iconfont-archer">&#xe60a;</span>aws</span>
+    
+        <span class="sidebar-category-name" data-categories="kotlin"><span class="iconfont-archer">&#xe60a;</span>kotlin</span>
     
         <span class="sidebar-category-name" data-categories="javascript"><span class="iconfont-archer">&#xe60a;</span>javascript</span>
     
