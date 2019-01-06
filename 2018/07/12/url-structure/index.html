@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Url structure · 개발괴발</title>
+    <title>Restful API · 개발괴발</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -207,7 +207,7 @@
                 <a href="/" >개발괴발</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Url structure</a>
+                <a href="#" class="post-name">Restful API</a>
             </div>
     </div>
     
@@ -239,7 +239,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Url structure
+            Restful API
             <!-- 404 -->
             
         </h1>
@@ -383,7 +383,93 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <p>Rest API는 리소스를 나타낼 때 URI(Uniform Resource Identifier)을 사용한다.</p>
+<p>클라이언트는 웹 연결 방식을 따라야 하고 URI를 불투명한 식별자로 취급해야 한다.</p>
+<p>디자인 규칙(URI 형태)</p>
+<ol>
+<li>슬래시 구분자(/)는 계층 관계를 나타내는 데 사용한다.</li>
+</ol>
+<p><a href="http://api.canvas.restapi.org/shapes/polygons/quadrilaterals/squares" target="_blank" rel="noopener">http://api.canvas.restapi.org/shapes/polygons/quadrilaterals/squares</a> </p>
+<ol start="2">
+<li>URI 마지막 문자로 슬래시(/)를 포함하지 않는다.</li>
+</ol>
+<p><a href="http://api.canvas.restapi.org/shapes/" target="_blank" rel="noopener">http://api.canvas.restapi.org/shapes/</a> </p>
+<p><a href="http://api.canvas.restapi.org/shapes" target="_blank" rel="noopener">http://api.canvas.restapi.org/shapes</a> </p>
+<p>URI가 다르다는 것은 리소스가 다르다는 것이고 리소스가 다르면 URI도 달라진다.</p>
+<p>따라서 REST API는 분명한 URI를 만들어 통신해야 하며 애매하게 리소스를 식별하려는 클라이언트의 시도를 그대로 받아들여서는 안된다.</p>
+<ol start="3">
+<li><p>하이픈(-)은 URI 가독성을 높이는 데 사용한다.</p>
+</li>
+<li><p>밑줄(_)은 URI에 사용하지 않는다.</p>
+</li>
+<li><p>URI 경로에는 소문자가 적합하다.</p>
+</li>
+</ol>
+<p>URI 경로에 대문자를 사용하면 문제가 될 수 있으므로 소문자를 사용한다. RFC 3986은 URI 스키마와 호스트를 제외하고 대소문자를 구별하도록 규정한다.</p>
+<p><a href="http://api.example.restapi.org/my-folder/my-doc" target="_blank" rel="noopener">http://api.example.restapi.org/my-folder/my-doc</a>  ok</p>
+<p>HTTP://API.EXAMPLE.RESTAPI.ORG/my-folder/my-doc URI 포맷 스펙(RFC 3986)에서 1과 같은 것으로 간주한다.</p>
+<p><a href="http://api.example.restapi.org/My-Folder/my-doc" target="_blank" rel="noopener">http://api.example.restapi.org/My-Folder/my-doc</a>  1, 2와 다른 URI이다. </p>
+<ol start="6">
+<li>파일 확장자는 URI에 포함시키지 않는다.</li>
+</ol>
+<p><a href="http://api.college.restapi.org/students/3248234/transcripts/2005/fall.json" target="_blank" rel="noopener">http://api.college.restapi.org/students/3248234/transcripts/2005/fall.json</a>  파일 확장자를 포맷을 나타내는 용도로 사용해서는 안된다.</p>
+<p><a href="http://api.college.restapi.org/students/3248234/transcripts/2005/fall" target="_blank" rel="noopener">http://api.college.restapi.org/students/3248234/transcripts/2005/fall</a></p>
+<p>URI 권한 설계</p>
+<ol>
+<li><p>API에 있어서 서브 도메인은 일관성 있게 사용해야 한다.</p>
+</li>
+<li><p>클라이언트 개발자 포털 서브 도메인 이름은 일관성 있게 만들어야 한다.</p>
+</li>
+</ol>
+<p>리소스 모델링</p>
+<p>URI 경로는 REST API의 리소스 모델을 다루는데 포워드 슬래시(/)로 경로 구문을 나눈다.</p>
+<p><a href="http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet" target="_blank" rel="noopener">http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet</a> </p>
+<p><a href="http://api.soccer.restapi.org/leagues/seattle/teams" target="_blank" rel="noopener">http://api.soccer.restapi.org/leagues/seattle/teams</a> </p>
+<p><a href="http://api.soccer.restapi.org/leagues/seattle" target="_blank" rel="noopener">http://api.soccer.restapi.org/leagues/seattle</a> </p>
+<p><a href="http://api.soccer.restapi.org/leagues" target="_blank" rel="noopener">http://api.soccer.restapi.org/leagues</a> </p>
+<p><a href="http://api.soccer.restapi.org" target="_blank" rel="noopener">http://api.soccer.restapi.org</a> </p>
+<p>리소스 원형</p>
+<p>도큐먼트 - 객체 인스턴스나 데이터베이스 레코드와 유사한 단일 개념이다.  </p>
+<p>컬렉션</p>
+<p>: 서버에서 관리하는 디렉터리라는 리소스.</p>
+<p>스토어</p>
+<p>: 클라이언트에서 관리하는 리소스 저장소.</p>
+<p>API 클라이언트가 리소스를 넣거나 빼는 것, 지우는 것에 관여한다.</p>
+<p>컨트롤러</p>
+<p>: 절차적인 개념을 모델화함. </p>
+<p>논리적으로 매핑되지 않은 애플리케이션 고유의 행동을 컨트롤러 리소스의 도움을 받아 수행한다.</p>
+<p>일반적으로 컨트롤러 이름은 URI 경로의 제일 마지막 부분에 표시된다.</p>
+<p>계층적으로 뒤따르는 자식 리소스는 없다.</p>
+<p>POST /aerts/245743/resend</p>
+<p>URI 경로 디자인</p>
+<p>슬래시(/)로 구분된 각 URI 경로 부분은 다양한 형태로 설계할 수 있다.</p>
+<ol>
+<li>도큐먼트 이름으로는 단수 명사를 사용해야 한다.</li>
+</ol>
+<p><a href="http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/claudio" target="_blank" rel="noopener">http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/claudio</a></p>
+<ol start="2">
+<li>컬렉션 이름으로는 복수 명사를 사용해야 한다.</li>
+</ol>
+<p><a href="http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players" target="_blank" rel="noopener">http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players</a> </p>
+<ol start="3">
+<li><p>스토어 이름으로는 복수 명사를 사용해야 한다.</p>
+</li>
+<li><p>컨트롤러 이름으로는 동사나 동사구를 사용해야 한다.</p>
+</li>
+<li><p>경로 부분 중 변하는 부분은 유일한 값으로 대체한다.</p>
+</li>
+<li><p>CRUD 기능을 나타내는 것은 URI에 사용하지 않는다.</p>
+</li>
+</ol>
+<p>URI Query 디자인</p>
+<ol>
+<li><p>URI 쿼리 부분으로 컬렉션이나 스토어를 필터링할 수 있다.</p>
+</li>
+<li><p>URI 쿼리는 컬렉션이나 스토어의 결과를 페이지로 구분하여 나타내는 데 사용해야 한다.</p>
+</li>
+<li></li>
+</ol>
+
     </article>
     <!-- license  -->
     
@@ -927,6 +1013,26 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-archive"> Total : 30 </div>
     
     <div class="post-archive">
@@ -963,12 +1069,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
         </li>
     
     
@@ -993,17 +1099,17 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >Css</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Python-virtualenv/" >Python-virtualenv</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >Css</a>
         </li>
     
     
@@ -1023,7 +1129,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2018/07/12/url-structure/" >Url structure</a>
+            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2018/07/12/url-structure/" >Restful API</a>
         </li>
     
     
@@ -1063,17 +1169,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/The-Critical-Rendering-Path/" >The Critical Rendering Path </a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/About-responsive-web/" >About responsive web</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/App-Lifecycles/" >App Lifecycles</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Weapons-of-Jank-Destruction/" >Weapons of Jank Destruction</a>
         </li>
     
     
@@ -1083,7 +1184,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/The-Critical-Rendering-Path/" >The Critical Rendering Path </a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Weapons-of-Jank-Destruction/" >Weapons of Jank Destruction</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/App-Lifecycles/" >App Lifecycles</a>
         </li>
     
     
@@ -1101,8 +1207,6 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="html"><span class="iconfont-archer">&#xe606;</span>html</span>
-    
         <span class="sidebar-tag-name" data-tags="aws"><span class="iconfont-archer">&#xe606;</span>aws</span>
     
         <span class="sidebar-tag-name" data-tags="angular"><span class="iconfont-archer">&#xe606;</span>angular</span>
@@ -1112,6 +1216,8 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="node"><span class="iconfont-archer">&#xe606;</span>node</span>
     
         <span class="sidebar-tag-name" data-tags="deploy"><span class="iconfont-archer">&#xe606;</span>deploy</span>
+    
+        <span class="sidebar-tag-name" data-tags="html"><span class="iconfont-archer">&#xe606;</span>html</span>
     
         <span class="sidebar-tag-name" data-tags="kotlin"><span class="iconfont-archer">&#xe606;</span>kotlin</span>
     
@@ -1150,9 +1256,9 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="html"><span class="iconfont-archer">&#xe60a;</span>html</span>
-    
         <span class="sidebar-category-name" data-categories="aws"><span class="iconfont-archer">&#xe60a;</span>aws</span>
+    
+        <span class="sidebar-category-name" data-categories="html"><span class="iconfont-archer">&#xe60a;</span>html</span>
     
         <span class="sidebar-category-name" data-categories="kotlin"><span class="iconfont-archer">&#xe60a;</span>kotlin</span>
     
