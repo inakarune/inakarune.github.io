@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Semantic html · 개발괴발</title>
+    <title>Session · 개발괴발</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -207,7 +207,7 @@
                 <a href="/" >개발괴발</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Semantic html</a>
+                <a href="#" class="post-name">Session</a>
             </div>
     </div>
     
@@ -239,7 +239,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Semantic html
+            Session
             <!-- 404 -->
             
         </h1>
@@ -255,15 +255,9 @@ height:50vh;
         
             <!-- 文章页标签  -->
             
-                <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "html">html</a>
-    
-</div>
-            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/05/27</span>
+                <span class="post-intro-time">2019/01/10</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -389,22 +383,14 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="ARTICLES"><a href="#ARTICLES" class="headerlink" title="ARTICLES"></a>ARTICLES</h3><p>article element는 웹페이지에서 독립적인 기사를 대표한다. 페이지에서 뽑아 내고 전혀 다른 컨텍스트에서 배포 할 수 있는 콘텐츠만 포장해야 한다. 예를 들어, Flipboard와 같은 앱은 사이트에서 article 요소를 가져 와서 자체 앱에 표시하고 독자에게 완벽하게 이해할 수 있어야 한다. article을 사용하여 페이지의 주요 콘텐츠를 다음과 같이 자체 포함 단위로 표시 할 수 있다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;article&gt;</span><br><span class="line">    &lt;h1&gt;Semantic HTML&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;By Troy McClure. Published January 3rd&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;This is an example web page explaining HTML5 semantic markup.&lt;/p&gt;</span><br><span class="line">    &lt;!-- ... --&gt;</span><br><span class="line">    &lt;p&gt;This fake article was written by somebody at InternetingIsHard.com, <span class="built_in">which</span></span><br><span class="line">    is a pretty decent place to learn how to become a web developer.&lt;/p&gt;</span><br><span class="line">&lt;/article&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;&amp;copy; 2017 InternetingIsHard.com&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>article은 본질적으로 HTML document의 미니 웹 페이지이다. 사이트의 나머지 부분과 완전히 분리된 고유한 머리말, 꼬리말 및 문서 개요가 있다.</p>
-<h4 id="USING-MULTIPLE-ARTICLE-ELEMENTS"><a href="#USING-MULTIPLE-ARTICLE-ELEMENTS" class="headerlink" title="USING MULTIPLE ARTICLE ELEMENTS"></a>USING MULTIPLE ARTICLE ELEMENTS</h4><p>블로그 게시물, 신문 기사 또는 단일 주제 전용 웹 페이지의 경우 페이지에 article 요소가 하나만있는 경우가 많다. 그러나 페이지 당 하나 이상의 article 요소를 갖는 것이 합법적이다. 좋은 예는 많은 블로그 게시물을 표시하는 페이지이다. 각 요소는 별도의 article 태그 집합으로 래핑 될 수 있다 (이 태그를 article.html 페이지에 추가 할 필요는 없다).</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;article&gt;</span><br><span class="line">    &lt;h1&gt;First Post&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;Some content&lt;/p&gt;</span><br><span class="line">&lt;/article&gt;</span><br><span class="line">&lt;article&gt;</span><br><span class="line">    &lt;h1&gt;Second Post&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;Some more content&lt;/p&gt;</span><br><span class="line">    &lt;h2&gt;Subsection&lt;/h2&gt;</span><br><span class="line">    &lt;p&gt;Some details&lt;/p&gt;</span><br><span class="line">&lt;/article&gt;</span><br><span class="line">&lt;article&gt;</span><br><span class="line">    &lt;h1&gt;Last Post&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;Final bit of content&lt;/p&gt;</span><br><span class="line">&lt;/article&gt;</span><br></pre></td></tr></table></figure>
-<p>이것은 우리 페이지를보고있는 누군가에게 신디케이션 될 수있는 세 가지 별개의 기사가 있음을 말해준다. 검색 엔진, 브라우저 또는 Google의 콘텐츠를 구문 분석하려는 다른 컴퓨터를 혼동하지 않고 여러 HTML 파일을 단일 문서로 병합하는 방법으로 생각하라. </p>
-<p>이것을 임의의 클래스 이름을 가진 일반적인 div 요소들과 비교하면 시맨틱 HTML로 웹을 탐색하기가 훨씬 쉬워진다.</p>
-<h3 id="SECTIONS"><a href="#SECTIONS" class="headerlink" title="SECTIONS"></a>SECTIONS</h3><h3 id="NAV-ELEMENTS"><a href="#NAV-ELEMENTS" class="headerlink" title="NAV ELEMENTS"></a>NAV ELEMENTS</h3><h3 id="HEADERS"><a href="#HEADERS" class="headerlink" title="HEADERS"></a>HEADERS</h3><h3 id="FOOTER"><a href="#FOOTER" class="headerlink" title="FOOTER"></a>FOOTER</h3><h3 id="ASIDES"><a href="#ASIDES" class="headerlink" title="ASIDES"></a>ASIDES</h3><h3 id="DIVS-FOR-LAYOUT"><a href="#DIVS-FOR-LAYOUT" class="headerlink" title="DIVS FOR LAYOUT"></a>DIVS FOR LAYOUT</h3><h3 id="DATE-AND-TIME"><a href="#DATE-AND-TIME" class="headerlink" title="DATE AND TIME"></a>DATE AND TIME</h3><h3 id="ADDRESS"><a href="#ADDRESS" class="headerlink" title="ADDRESS"></a>ADDRESS</h3><h3 id="FIGURE-AND-CATION"><a href="#FIGURE-AND-CATION" class="headerlink" title="FIGURE AND CATION"></a>FIGURE AND CATION</h3><h3 id="LEGACY-CONSIDERATION"><a href="#LEGACY-CONSIDERATION" class="headerlink" title="LEGACY CONSIDERATION"></a>LEGACY CONSIDERATION</h3><p>원문(<a href="https://internetingishard.com/html-and-css/semantic-html/#the-document-outline" target="_blank" rel="noopener">https://internetingishard.com/html-and-css/semantic-html/#the-document-outline</a>)</p>
-
+        
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>author: <a href="http://inakarune.github.io">SophiaY</a>
-            <p>url: <a href="http://inakarune.github.io/2018/05/27/semantic-html/">http://inakarune.github.io/2018/05/27/semantic-html/</a>
-            <p>date: <a href="http://inakarune.github.io/2018/05/27/semantic-html/">May 27th 2018, 8:45:13</a>
+            <p>url: <a href="http://inakarune.github.io/2019/01/10/Session/">http://inakarune.github.io/2019/01/10/Session/</a>
+            <p>date: <a href="http://inakarune.github.io/2019/01/10/Session/">January 10th 2019, 9:39:50</a>
             <!-- <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </div>
     
@@ -412,17 +398,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/06/06/Aws-Codedeploy/" title= Aws Codedeploy >
-                    <div class="nextTitle">Aws Codedeploy</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/05/26/angular-ng-new-trouble/" title= angular ng new trouble >
-                    <div class="prevTitle">angular ng new trouble</div>
+                <a href= "/2019/01/08/Parallel-Computing/" title= Parallel Computing >
+                    <div class="prevTitle">Parallel Computing</div>
                 </a>
             
         </li>
@@ -530,7 +511,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ARTICLES"><span class="toc-number">1.</span> <span class="toc-text">ARTICLES</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#USING-MULTIPLE-ARTICLE-ELEMENTS"><span class="toc-number">1.1.</span> <span class="toc-text">USING MULTIPLE ARTICLE ELEMENTS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SECTIONS"><span class="toc-number">2.</span> <span class="toc-text">SECTIONS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NAV-ELEMENTS"><span class="toc-number">3.</span> <span class="toc-text">NAV ELEMENTS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HEADERS"><span class="toc-number">4.</span> <span class="toc-text">HEADERS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FOOTER"><span class="toc-number">5.</span> <span class="toc-text">FOOTER</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ASIDES"><span class="toc-number">6.</span> <span class="toc-text">ASIDES</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DIVS-FOR-LAYOUT"><span class="toc-number">7.</span> <span class="toc-text">DIVS FOR LAYOUT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DATE-AND-TIME"><span class="toc-number">8.</span> <span class="toc-text">DATE AND TIME</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ADDRESS"><span class="toc-number">9.</span> <span class="toc-text">ADDRESS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FIGURE-AND-CATION"><span class="toc-number">10.</span> <span class="toc-text">FIGURE AND CATION</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LEGACY-CONSIDERATION"><span class="toc-number">11.</span> <span class="toc-text">LEGACY CONSIDERATION</span></a></li></ol>
+        
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
