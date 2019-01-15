@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Css transition · 개발괴발</title>
+    <title>The Box Models · 개발괴발</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -207,7 +207,7 @@
                 <a href="/" >개발괴발</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Css transition</a>
+                <a href="#" class="post-name">The Box Models</a>
             </div>
     </div>
     
@@ -239,7 +239,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Css transition
+            The Box Models
             <!-- 404 -->
             
         </h1>
@@ -255,9 +255,15 @@ height:50vh;
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "CSS">CSS</a>
+    
+</div>
+            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/08/19</span>
+                <span class="post-intro-time">2019/01/15</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -383,14 +389,71 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <p>#The Box Model</p>
+<ul>
+<li><p>content: text, images, etc.</p>
+</li>
+<li><p>padding: transparent area around the content, inside of the box</p>
+</li>
+<li><p>border: goes around the padding and the content.</p>
+</li>
+<li><p>margin: space between boxes.</p>
+</li>
+</ul>
+<p>##heights and widths</p>
+<p>total width = right border + right padding + specified width + left padding + left border</p>
+<p>total height = top border + top padding + specified height + bottom padding + bottom border</p>
+<p>example: height = 0 + 20px + 100px + 20px + 0 = 140px</p>
+<p>##box types: inline, block-level and inline-block</p>
+<p>###Block-level boxes</p>
+<ul>
+<li><p>Elements formatted visually as blocks</p>
+</li>
+<li><p>100% of parent’s width</p>
+</li>
+<li><p>Vertically, one after another</p>
+</li>
+<li><p>Box-model applies as showed*</p>
+</li>
+</ul>
+<p>display: block</p>
+<p>(display: flex)</p>
+<p>(display: list-item)</p>
+<p>(display: table)</p>
+<p>inline boxes</p>
+<ul>
+<li><p>content is distributed in lines</p>
+</li>
+<li><p>Occupies only content’s space*</p>
+</li>
+<li><p>No line-breaks*</p>
+</li>
+<li><p>No heights and widths</p>
+</li>
+<li><p>paddings and margins only horizontal (left and right)</p>
+</li>
+</ul>
+<p>display: inline</p>
+<p>inline-block boxes</p>
+<ul>
+<li><p>A mix of block and inline</p>
+</li>
+<li><p>Occupies only contents’ space*</p>
+</li>
+<li><p>No line-breaks</p>
+</li>
+<li><p>Box model applies as showed</p>
+</li>
+</ul>
+<p>display: inline-block;</p>
+
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>author: <a href="http://inakarune.github.io">SophiaY</a>
-            <p>url: <a href="http://inakarune.github.io/2018/08/19/transition/">http://inakarune.github.io/2018/08/19/transition/</a>
-            <p>date: <a href="http://inakarune.github.io/2018/08/19/transition/">August 19th 2018, 4:17:49</a>
+            <p>url: <a href="http://inakarune.github.io/2019/01/15/The-Box-Models/">http://inakarune.github.io/2019/01/15/The-Box-Models/</a>
+            <p>date: <a href="http://inakarune.github.io/2019/01/15/The-Box-Models/">January 15th 2019, 8:15:04</a>
             <!-- <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </div>
     
@@ -398,17 +461,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/08/22/C/" title= C >
-                    <div class="nextTitle">C</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/08/18/Debugging/" title= Debugging >
-                    <div class="prevTitle">Debugging</div>
+                <a href= "/2019/01/13/Link-import-CSS/" title= Link, import CSS >
+                    <div class="prevTitle">Link, import CSS</div>
                 </a>
             
         </li>
