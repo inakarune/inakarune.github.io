@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>개발괴발</title>
+    <title>알고리즘 소개 · 개발괴발</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180501 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180501 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
         
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -191,14 +193,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >개발괴발</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">알고리즘 소개</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>개발괴발</a>
 </header>
@@ -219,17 +230,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/rose.JPG)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            개발괴발
-            <!-- 文章页  -->
+            알고리즘 소개
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -237,12 +248,36 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                ...
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2019/01/23</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -346,265 +381,66 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/About-responsive-web/" >
-                
-                    <span>About responsive web</span>
-            </a>
-            <div class="abstract-content">
-                
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/Weapons-of-Jank-Destruction/" >
-                
-                    <span>Weapons of Jank Destruction</span>
-            </a>
-            <div class="abstract-content">
-                chrome dev tool의 timeline을 통해 퍼포먼스 디버깅이 가능하다.timeline은 프로젝트에서 1초당 프레임을 추적하게 한다.타임라인을 녹음할 수 있고 각 프레임당 어떤 작업이 포함되는지도 알 수 있다.더 자세히..https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool?hl=ko
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="알고리즘-소개"><a href="#알고리즘-소개" class="headerlink" title="알고리즘 소개"></a>알고리즘 소개</h1><h2 id="알고리즘의-개념"><a href="#알고리즘의-개념" class="headerlink" title="알고리즘의 개념"></a>알고리즘의 개념</h2><ul>
+<li>컴퓨터를 이용한 문제 해결 능력은 주어진 문제에 대한 알고리즘의 존재 유무가 결정</li>
+<li>컴퓨터과학 : “알고리즘과 관련된 이슈를 다루는 학문”</li>
+<li>알고리즘 : 주어진 문제를 해결하기 위한 명령어들을 단계젹으로 나열한 것<br>만족해야 할 조건 -&gt; 입출력, 명확성, 유한성, 유효성</li>
+<li>알고리즘 생성 과정 : 설계 -&gt; 기술(표현) -&gt; 정확성 분석 -&gt; 효율성 분석<ul>
+<li>기술 방법 -&gt; 일상적인 언어, 순서도, 의사 코드 등</li>
+</ul>
+</li>
+</ul>
+<h2 id="기본-자료구조"><a href="#기본-자료구조" class="headerlink" title="기본 자료구조"></a>기본 자료구조</h2><ul>
+<li>좋은 프로그램은 주어진 문제에 적합한 자료구조와 효율적인 알고리즘을 사용한다.</li>
+<li>선형 자료구조(배열, 연결리스트, 스택, 큐) <-> 비선형 자료구조(트리, 그래프)</-></li>
+<li>배열 : 같은 자료형을 갖는 여러 원소를 하나의 변수이름으로 모아놓은 데이터의 집합<br>인덱스를 통한 직접적인 원소 접근 -&gt; 빠르고 동일한 접근 시간<br>삽입/삭제 시 추가적인 자료의 이동에 따른 시간적인 오버헤드 발생</li>
+<li>연결 리스트 -&gt; 데이터 필드와 링크 필드로 이루어진 노드라는 저장구조를 이용<br>비교적 간단한 삽입과 삭제 과정<br>순차적인 데이터 접근</li>
+<li>스택 : 한쪽 끝에서만 데이터의 삽입/삭제가 수행되는 선형 리스트<br>후입선출(LIFO), push 연산, pop 연산, top</li>
+<li>큐 : 선형 리스트의 한쪽 끝에서는 데이터의 삽입만 수행되고, 다른 한쪽 끝에서는 삭제만 수행되는 자료구조<br>선입선출(FIFO), front/head, rear/tail</li>
+<li>트리 : 하나 이상의 노드로 구성된 유한 집합 T</li>
+</ul>
 
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
+    </article>
+    <!-- license  -->
     
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/App-Lifecycles/" >
-                
-                    <span>App Lifecycles</span>
-            </a>
-            <div class="abstract-content">
-                Rail Model(사용자 중심 성능 모델)• Response : 100ms이내에 응답• Animate : 16ms(브라우저가 새 프레임을 화면에 만드는 시간을 계산한다면 코드는 10ms이내에 실행을 마쳐야 함)• Idle : 50ms• Load : 1 second(1초 내로 사이트를 로드)• 성능(퍼포먼스) 개선 노력의 초점을 사용자에게 맞춰야 한다. 성능 지연을 사용자가 어떻게 받아들이는지 파악.Rail more detail(https://developers.google.com/web/fundamentals/performa...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/The-Critical-Rendering-Path/" >
-                
-                    <span>The Critical Rendering Path </span>
-            </a>
-            <div class="abstract-content">
-                왜 1초당 60프레임에 신경써야 하는지?1초에 60프레임1프레임당 16ms가 랜더링하는데 소요된다.Making a frame랜더트리(Render tree)는 DOM과 비슷하지만 몇몇 점이 다르다.예를 들어 element에 적용한 css가 display: none이라면 랜더 트리에 나타나지 않는다.javascript -&gt; style -&gt; layout -&gt; paint -&gt; composite• javascript or web animation api, css animation
-
-css나 javascript 같은...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/new-angular-project/" >
-                
-                    <span>New Angular Project</span>
-            </a>
-            <div class="abstract-content">
-                Create a new angular project1$ ng new project_name --skip-install
-1234$ cd project_name$ git init$ git add .$ git commit -m 'init'
-github에 new repository와 같은 이름의 repository를 생성한다.
-12$ git remote add origin git@github.com:username/new_repo$ git push -u origin master
-초기 설정파일이 푸시된 github repository가...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "angular">angular</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "javascript">javascript</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/1/" >
-                
-                    <span>에라이</span>
-            </a>
-            <div class="abstract-content">
-                깃 한번 잘못 썻다가 블로그를 갈아엎네 -ㅁㅠ
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/hello-world/" >
-                
-                    <span>Hello World</span>
-            </a>
-            <div class="abstract-content">
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
+        <div class="license-wrapper">
+            <p>author: <a href="http://inakarune.github.io">SophiaY</a>
+            <p>url: <a href="http://inakarune.github.io/2019/01/23/알고리즘-소개/">http://inakarune.github.io/2019/01/23/알고리즘-소개/</a>
+            <p>date: <a href="http://inakarune.github.io/2019/01/23/알고리즘-소개/">January 23rd 2019, 8:46:58</a>
+            <!-- <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/01/20/SVG/" title= SVG >
+                    <div class="prevTitle">SVG</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/3/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" src= /avatar/Misaka.jpg >
-    <div class="profile-name">sophiaY</div>
-    
-    <div class="profile-signature">
-        그저 묵묵히 할 뿐
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:inakarune@naver.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/inakarune" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title=wechat>
-                  
-                  <img class="profile-qr" src="/SNS 안해요오" />
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href= //www.naver.com target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.google.com target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -677,6 +513,24 @@ More...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#알고리즘-소개"><span class="toc-number">1.</span> <span class="toc-text">알고리즘 소개</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#알고리즘의-개념"><span class="toc-number">1.1.</span> <span class="toc-text">알고리즘의 개념</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#기본-자료구조"><span class="toc-number">1.2.</span> <span class="toc-text">기본 자료구조</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1507,6 +1361,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
     
     </body>
 </html>
