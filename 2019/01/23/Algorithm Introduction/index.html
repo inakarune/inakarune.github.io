@@ -395,11 +395,74 @@ height:50vh;
 <h2 id="기본-자료구조"><a href="#기본-자료구조" class="headerlink" title="기본 자료구조"></a>기본 자료구조</h2><ul>
 <li>좋은 프로그램은 주어진 문제에 적합한 자료구조와 효율적인 알고리즘을 사용한다.</li>
 <li>선형 자료구조(배열, 연결리스트, 스택, 큐) <-> 비선형 자료구조(트리, 그래프)</-></li>
-<li>배열 : 같은 자료형을 갖는 여러 원소를 하나의 변수이름으로 모아놓은 데이터의 집합<br>인덱스를 통한 직접적인 원소 접근 -&gt; 빠르고 동일한 접근 시간<br>삽입/삭제 시 추가적인 자료의 이동에 따른 시간적인 오버헤드 발생</li>
-<li>연결 리스트 -&gt; 데이터 필드와 링크 필드로 이루어진 노드라는 저장구조를 이용<br>비교적 간단한 삽입과 삭제 과정<br>순차적인 데이터 접근</li>
-<li>스택 : 한쪽 끝에서만 데이터의 삽입/삭제가 수행되는 선형 리스트<br>후입선출(LIFO), push 연산, pop 연산, top</li>
-<li>큐 : 선형 리스트의 한쪽 끝에서는 데이터의 삽입만 수행되고, 다른 한쪽 끝에서는 삭제만 수행되는 자료구조<br>선입선출(FIFO), front/head, rear/tail</li>
-<li>트리 : 하나 이상의 노드로 구성된 유한 집합 T<br>조건1 T의 원소 가운데 단 하나의 루트 노드가 존재한다.<br>조건2 루트 노드를 제외한 나머지 노드는 n개(n &gt;= 0)의 서로 분리된 부분 집합 T1, T2 … Tn으로 나누어지며, 각 Ti는 트리가 된다. 이 때 각 Ti를 트리 T의 서브트리라고 한다.</li>
+<li>배열 : 같은 자료형을 갖는 여러 원소를 하나의 변수이름으로 모아놓은 데이터의 집합<ul>
+<li>인덱스를 통한 직접적인 원소 접근 -&gt; 빠르고 동일한 접근 시간</li>
+<li>삽입/삭제 시 추가적인 자료의 이동에 따른 시간적인 오버헤드 발생</li>
+</ul>
+</li>
+<li>연결 리스트 -&gt; 데이터 필드와 링크 필드로 이루어진 노드라는 저장구조를 이용<ul>
+<li>비교적 간단한 삽입과 삭제 과정</li>
+<li>순차적인 데이터 접근</li>
+</ul>
+</li>
+<li>스택 : 한쪽 끝에서만 데이터의 삽입/삭제가 수행되는 선형 리스트<ul>
+<li>후입선출(LIFO), push 연산, pop 연산, top</li>
+</ul>
+</li>
+<li>큐 : 선형 리스트의 한쪽 끝에서는 데이터의 삽입만 수행되고, 다른 한쪽 끝에서는 삭제만 수행되는 자료구조<ul>
+<li>선입선출(FIFO), front/head, rear/tail</li>
+</ul>
+</li>
+<li>트리 : 하나 이상의 노드로 구성된 유한 집합 T<ul>
+<li>조건1 T의 원소 가운데 단 하나의 루트 노드가 존재한다.</li>
+<li>조건2 루트 노드를 제외한 나머지 노드는 n개(n &gt;= 0)의 서로 분리된 부분 집합 T1, T2 … Tn으로 나누어지며, 각 Ti는 트리가 된다. 이 때 각 Ti를 트리 T의 서브트리라고 한다.</li>
+<li>용어 : 노드의 차수, 트리의 차수, 리프 노드(단말 노드), 비단말 노드, 부모 노드, 자식 노드, 형제 노드, 후손(자손), 조상(선조), 높이(깊이), 숲</li>
+<li>이진 트리 : 각 노드의 차수가 2 이하인 순서 트리<ul>
+<li>레벨i에서의 최대 노드의 개수 -&gt; 2i</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>종류 : 전 이진 트리, 포화 아진 트리, 완전 이진 트리, 균형 이진 트리 등</li>
+<li>그래프 G = (V, E) -&gt; V : 정점의 집합, G : 간선의 집합<ul>
+<li>간선의 방향성 유무에 따라 -&gt; 무방향 그래프, 방향 그래프</li>
+<li>가중 그래프 -&gt; 간선에 비용이나 시간과 같은 의미를 갖는 가중치를 부여</li>
+<li>용어 : 인접, 부수, 부분 그래프, 경로, 경로의 길이, 차수(진입 차수, 진출 차수), 단순 경로, 사이클, 루프, 연결, 강력 연결</li>
+<li>구현 방법 : 인접 행렬, 인접 리스트</li>
+</ul>
+</li>
+</ul>
+<h2 id="알고리즘의-설계"><a href="#알고리즘의-설계" class="headerlink" title="알고리즘의 설계"></a>알고리즘의 설계</h2><ul>
+<li>주어진 문제, 속성, 조건 등이 매우 다양하므로 모든 문제에 일반적으로 적용할 수 있는 설계 기법은 존재하지 않음</li>
+<li>대표적인 설계 기법 : 분할정복 방법, 동적 프로그래밍 방법, 욕심쟁이 방법</li>
+<li>문제 기반의 알고리즘 -&gt; 정렬 알고리즘, 탐색 알고리즘</li>
+</ul>
+<h2 id="알고리즘의-분석"><a href="#알고리즘의-분석" class="headerlink" title="알고리즘의 분석"></a>알고리즘의 분석</h2><ul>
+<li>정확성 분석 -&gt; 유효한 입력에 대해 유한 시간 내에 정확한 결과를 생성하는지 판단</li>
+<li>효율성 분석 -&gt; 알고리즘 수행에 필요한 메모리의 양과 수행 시간을 측정<ul>
+<li>공간 복잡도 -&gt; 메모리의 양을 측정</li>
+<li>시간 복잡도<ul>
+<li>알고리즘의 수행 시간 = 알고리즘에서 수행되는 단위 연산(명령)의 수행 횟수의 총합</li>
+<li>입력 크기(입력으로 제공되는 데이터의 크기)의 함수로 표현</li>
+<li>입력 데이터의 상태에 종속적 -&gt; 최악의 수행 시간으로 표현</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="점근성능"><a href="#점근성능" class="headerlink" title="점근성능"></a>점근성능</h2><ul>
+<li>입력 크기가 무한대로 커짐에 따라 결정되는 알고리즘의 성능<ul>
+<li>다항식으로 표현되는 수행 시간에 대해서 입력 크기가 커짐에 따라 차수가 낮은 항들과 상수항의 역할은 감소하므로, 결국 계수 없이 최고차항만을 이용해서 표시 -&gt; 알고리즘의 정확한 수행 시간이 아니지만, 입력 크기가 증가함에 따라 알고리즘의 수행 시간이 어떤 추세로 증가하는지를 의미 -&gt; 알고리즘의 우열을 따질 때 용이</li>
+</ul>
+</li>
+<li>표기법<ul>
+<li>O 표기 -&gt; 점근적 </li>
+</ul>
+</li>
+</ul>
+<h2 id="순환-알고리즘의-성능"><a href="#순환-알고리즘의-성능" class="headerlink" title="순환 알고리즘의 성능"></a>순환 알고리즘의 성능</h2><ul>
+<li>순환(재귀) -&gt; 함수의 수행 과정에서 자기 자신의 함수를 다시 수행하는 형태</li>
+<li>분할정복 방법을 적용한 알고리즘들은 개념적으로 순환 알고리즘의 형태를 가짐 -&gt; 수행 시간은 점화식으로 표현</li>
 </ul>
 
     </article>
@@ -529,7 +592,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#알고리즘-소개"><span class="toc-number">1.</span> <span class="toc-text">알고리즘 소개</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#알고리즘의-개념"><span class="toc-number">1.1.</span> <span class="toc-text">알고리즘의 개념</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#기본-자료구조"><span class="toc-number">1.2.</span> <span class="toc-text">기본 자료구조</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#알고리즘-소개"><span class="toc-number">1.</span> <span class="toc-text">알고리즘 소개</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#알고리즘의-개념"><span class="toc-number">1.1.</span> <span class="toc-text">알고리즘의 개념</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#기본-자료구조"><span class="toc-number">1.2.</span> <span class="toc-text">기본 자료구조</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#알고리즘의-설계"><span class="toc-number">1.3.</span> <span class="toc-text">알고리즘의 설계</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#알고리즘의-분석"><span class="toc-number">1.4.</span> <span class="toc-text">알고리즘의 분석</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#점근성능"><span class="toc-number">1.5.</span> <span class="toc-text">점근성능</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#순환-알고리즘의-성능"><span class="toc-number">1.6.</span> <span class="toc-text">순환 알고리즘의 성능</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -542,26 +605,6 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -1119,7 +1162,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/apply-bind-call/" >apply, bind, call</a>
         </li>
     
     
@@ -1129,7 +1172,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/apply-bind-call/" >apply, bind, call</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
         </li>
     
     
@@ -1159,12 +1202,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >CSS</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >CSS</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
         </li>
     
     
@@ -1214,12 +1257,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Kotlin-Basic/" >Kotlin Basic</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Kotlin-Basic/" >Kotlin Basic</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
         </li>
     
     
@@ -1229,22 +1272,22 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/App-Lifecycles/" >App Lifecycles</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Weapons-of-Jank-Destruction/" >Weapons of Jank Destruction</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/The-Critical-Rendering-Path/" >The Critical Rendering Path </a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/App-Lifecycles/" >App Lifecycles</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/The-Critical-Rendering-Path/" >The Critical Rendering Path </a>
         </li>
     
     
