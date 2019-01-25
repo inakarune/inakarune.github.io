@@ -389,17 +389,15 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="알고리즘-소개"><a href="#알고리즘-소개" class="headerlink" title="알고리즘 소개"></a>알고리즘 소개</h1><h2 id="알고리즘의-개념"><a href="#알고리즘의-개념" class="headerlink" title="알고리즘의 개념"></a>알고리즘의 개념</h2><ul>
-<li>컴퓨터를 이용한 문제 해결 능력은 주어진 문제에 대한 알고리즘의 존재 유무가 결정</li>
-<li>컴퓨터과학 : “알고리즘과 관련된 이슈를 다루는 학문”</li>
-<li>알고리즘 : 주어진 문제를 해결하기 위한 명령어들을 단계젹으로 나열한 것<br>만족해야 할 조건 -&gt; 입출력, 명확성, 유한성, 유효성</li>
+        <h1 id="알고리즘-소개"><a href="#알고리즘-소개" class="headerlink" title="알고리즘 소개"></a>알고리즘 소개</h1><h2 id="알고리즘의-개념"><a href="#알고리즘의-개념" class="headerlink" title="알고리즘의 개념"></a>알고리즘의 개념</h2><p>컴퓨터를 이용한 문제 해결 능력은 주어진 문제에 대한 알고리즘의 존재 유무가 결정<br>컴퓨터과학 : “알고리즘과 관련된 이슈를 다루는 학문”<br>알고리즘 : 주어진 문제를 해결하기 위한 명령어들을 단계젹으로 나열한 것<br>만족해야 할 조건 -&gt; 입출력, 명확성, 유한성, 유효성</p>
+<ul>
 <li>알고리즘 생성 과정 : 설계 -&gt; 기술(표현) -&gt; 정확성 분석 -&gt; 효율성 분석<ul>
 <li>기술 방법 -&gt; 일상적인 언어, 순서도, 의사 코드 등</li>
 </ul>
 </li>
 </ul>
-<h2 id="기본-자료구조"><a href="#기본-자료구조" class="headerlink" title="기본 자료구조"></a>기본 자료구조</h2><ul>
-<li>좋은 프로그램은 주어진 문제에 적합한 자료구조와 효율적인 알고리즘을 사용한다.</li>
+<h2 id="기본-자료구조"><a href="#기본-자료구조" class="headerlink" title="기본 자료구조"></a>기본 자료구조</h2><p>좋은 프로그램은 주어진 문제에 적합한 자료구조와 효율적인 알고리즘을 사용한다.</p>
+<ul>
 <li>선형 자료구조(배열, 연결리스트, 스택, 큐) <-> 비선형 자료구조(트리, 그래프)</-></li>
 <li>배열 : 같은 자료형을 갖는 여러 원소를 하나의 변수이름으로 모아놓은 데이터의 집합<ul>
 <li>인덱스를 통한 직접적인 원소 접근 -&gt; 빠르고 동일한 접근 시간</li>
@@ -438,35 +436,18 @@ height:50vh;
 </ul>
 </li>
 </ul>
-<h2 id="알고리즘의-설계"><a href="#알고리즘의-설계" class="headerlink" title="알고리즘의 설계"></a>알고리즘의 설계</h2><ul>
-<li>주어진 문제, 속성, 조건 등이 매우 다양하므로 모든 문제에 일반적으로 적용할 수 있는 설계 기법은 존재하지 않음</li>
-<li>대표적인 설계 기법 : 분할정복 방법, 동적 프로그래밍 방법, 욕심쟁이 방법</li>
-<li>문제 기반의 알고리즘 -&gt; 정렬 알고리즘, 탐색 알고리즘</li>
-</ul>
-<h2 id="알고리즘의-분석"><a href="#알고리즘의-분석" class="headerlink" title="알고리즘의 분석"></a>알고리즘의 분석</h2><ul>
-<li>정확성 분석 -&gt; 유효한 입력에 대해 유한 시간 내에 정확한 결과를 생성하는지 판단</li>
-<li>효율성 분석 -&gt; 알고리즘 수행에 필요한 메모리의 양과 수행 시간을 측정<ul>
-<li>공간 복잡도 -&gt; 메모리의 양을 측정</li>
-<li>시간 복잡도<ul>
-<li>알고리즘의 수행 시간 = 알고리즘에서 수행되는 단위 연산(명령)의 수행 횟수의 총합</li>
-<li>입력 크기(입력으로 제공되는 데이터의 크기)의 함수로 표현</li>
-<li>입력 데이터의 상태에 종속적 -&gt; 최악의 수행 시간으로 표현</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="점근성능"><a href="#점근성능" class="headerlink" title="점근성능"></a>점근성능</h2><ul>
-<li>입력 크기가 무한대로 커짐에 따라 결정되는 알고리즘의 성능<ul>
-<li>다항식으로 표현되는 수행 시간에 대해서 입력 크기가 커짐에 따라 차수가 낮은 항들과 상수항의 역할은 감소하므로, 결국 계수 없이 최고차항만을 이용해서 표시 -&gt; 알고리즘의 정확한 수행 시간이 아니지만, 입력 크기가 증가함에 따라 알고리즘의 수행 시간이 어떤 추세로 증가하는지를 의미 -&gt; 알고리즘의 우열을 따질 때 용이</li>
-</ul>
-</li>
-<li>표기법<ul>
-<li>O 표기 -&gt; 점근적 </li>
-</ul>
-</li>
-</ul>
-<h2 id="순환-알고리즘의-성능"><a href="#순환-알고리즘의-성능" class="headerlink" title="순환 알고리즘의 성능"></a>순환 알고리즘의 성능</h2><ul>
+<h2 id="알고리즘의-설계"><a href="#알고리즘의-설계" class="headerlink" title="알고리즘의 설계"></a>알고리즘의 설계</h2><p>주어진 문제, 속성, 조건 등이 매우 다양하므로 모든 문제에 일반적으로 적용할 수 있는 설계 기법은 존재하지 않음<br>대표적인 설계 기법 : 분할정복 방법, 동적 프로그래밍 방법, 욕심쟁이 방법<br>문제 기반의 알고리즘 -&gt; 정렬 알고리즘, 탐색 알고리즘</p>
+<h2 id="알고리즘의-분석"><a href="#알고리즘의-분석" class="headerlink" title="알고리즘의 분석"></a>알고리즘의 분석</h2><p>정확성 분석 -&gt; 유효한 입력에 대해 유한 시간 내에 정확한 결과를 생성하는지 판단<br>효율성 분석 -&gt; 알고리즘 수행에 필요한 메모리의 양과 수행 시간을 측정</p>
+<pre><code>- 공간 복잡도 -&gt; 메모리의 양을 측정
+- 시간 복잡도
+    - 알고리즘의 수행 시간 = 알고리즘에서 수행되는 단위 연산(명령)의 수행 횟수의 총합
+    - 입력 크기(입력으로 제공되는 데이터의 크기)의 함수로 표현
+    - 입력 데이터의 상태에 종속적 -&gt; 최악의 수행 시간으로 표현
+</code></pre><h2 id="점근성능"><a href="#점근성능" class="headerlink" title="점근성능"></a>점근성능</h2><p>입력 크기가 무한대로 커짐에 따라 결정되는 알고리즘의 성능</p>
+<pre><code>- 다항식으로 표현되는 수행 시간에 대해서 입력 크기가 커짐에 따라 차수가 낮은 항들과 상수항의 역할은 감소하므로, 결국 계수 없이 최고차항만을 이용해서 표시 -&gt; 알고리즘의 정확한 수행 시간이 아니지만, 입력 크기가 증가함에 따라 알고리즘의 수행 시간이 어떤 추세로 증가하는지를 의미 -&gt; 알고리즘의 우열을 따질 때 용이
+</code></pre><p>표기법</p>
+<pre><code>- O 표기 -&gt; 점근적 
+</code></pre><h2 id="순환-알고리즘의-성능"><a href="#순환-알고리즘의-성능" class="headerlink" title="순환 알고리즘의 성능"></a>순환 알고리즘의 성능</h2><ul>
 <li>순환(재귀) -&gt; 함수의 수행 과정에서 자기 자신의 함수를 다시 수행하는 형태</li>
 <li>분할정복 방법을 적용한 알고리즘들은 개념적으로 순환 알고리즘의 형태를 가짐 -&gt; 수행 시간은 점화식으로 표현</li>
 </ul>
@@ -1144,6 +1125,28 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-archive"> Total : 38 </div>
     
     <div class="post-archive">
@@ -1215,17 +1218,17 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/apply-bind-call/" >apply, bind, call</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
         </li>
     
     
@@ -1255,12 +1258,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Python-virtualenv/" >Python-virtualenv</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Python-virtualenv/" >Python-virtualenv</a>
         </li>
     
     
@@ -1320,12 +1323,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Weapons-of-Jank-Destruction/" >Weapons of Jank Destruction</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/The-Critical-Rendering-Path/" >The Critical Rendering Path </a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/About-responsive-web/" >About responsive web</a>
         </li>
     
     
@@ -1335,7 +1333,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/About-responsive-web/" >About responsive web</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Weapons-of-Jank-Destruction/" >Weapons of Jank Destruction</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/The-Critical-Rendering-Path/" >The Critical Rendering Path </a>
         </li>
     
     
