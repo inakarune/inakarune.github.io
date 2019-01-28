@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Weapons of Jank Destruction · 개발괴발</title>
+    <title>About Database · 개발괴발</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -207,7 +207,7 @@
                 <a href="/" >개발괴발</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Weapons of Jank Destruction</a>
+                <a href="#" class="post-name">About Database</a>
             </div>
     </div>
     
@@ -239,7 +239,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Weapons of Jank Destruction
+            About Database
             <!-- 404 -->
             
         </h1>
@@ -255,9 +255,15 @@ height:50vh;
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Database">Database</a>
+    
+</div>
+            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/05/15</span>
+                <span class="post-intro-time">2019/01/28</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -383,15 +389,60 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>chrome dev tool의 timeline을 통해 퍼포먼스 디버깅이 가능하다.<br>timeline은 프로젝트에서 1초당 프레임을 추적하게 한다.<br>타임라인을 녹음할 수 있고 각 프레임당 어떤 작업이 포함되는지도 알 수 있다.<br>더 자세히..<br><a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool?hl=ko" target="_blank" rel="noopener">https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool?hl=ko</a></p>
+        <h1 id="데이터베이스의-이해"><a href="#데이터베이스의-이해" class="headerlink" title="데이터베이스의 이해"></a>데이터베이스의 이해</h1><h2 id="데이터베이스-시스템의-개요"><a href="#데이터베이스-시스템의-개요" class="headerlink" title="데이터베이스 시스템의 개요"></a>데이터베이스 시스템의 개요</h2><p>데이터베이스 : 데이터의 집합<br>데이터베이스 관리 시스템(DBMS: Database Management System) : 컴퓨터를 사용하여 데이터베이스를 관리할 수 있는 시스템.<br>DBMS : 한 조직의 연관된 데이터의 집합을 다수의 사용자가 공용으로 사용하기 위해 통합 저장하는 소프트웨어 패키지.</p>
+<ul>
+<li>목적 : 데이터베이스 내의 데이터를 편리하고 효과적으로 저장하고 조작.</li>
+</ul>
+<p>데이터베이스 시스템(database system) </p>
+<ul>
+<li>DBMS와 함께 사용자에게 서비스 형태로 제공되는 애플리케이션이 포함된 일체의 시스템</li>
+<li>대량의 정보를 관리하기 위한 목적으로 설계</li>
+<li>정보 저장을 위한 구조 정의와 정보 조작을 위한 메커니즘이 포함되어야 함.</li>
+<li>다수의 사용자가 데이터에 접근하기 때문에 오류 및 비허가된 접근의 시도에도 저장된 정보의 안정성을 확보할 수 있어야</li>
+<li>데이터가 여러 사용자에게 공유되는 환경에서 발생할 수 있는 비정상적(anomalous) 결과를 배제할 수 있어야</li>
+</ul>
+<h2 id="데이터베이스-관리-시스템의-목적"><a href="#데이터베이스-관리-시스템의-목적" class="headerlink" title="데이터베이스 관리 시스템의 목적"></a>데이터베이스 관리 시스템의 목적</h2><p>DBMS는 컴퓨터를 이용하여 상업적인 데이터를 관리하기 위한 목적으로 사용되기 시작</p>
+<h3 id="파일-처리-시스템-file-processing-system"><a href="#파일-처리-시스템-file-processing-system" class="headerlink" title="파일 처리 시스템(file processing system)"></a>파일 처리 시스템(file processing system)</h3><ul>
+<li>파일을 사용하여 데이터를 관리하는 방식</li>
+<li>운영체제에 의해 지원</li>
+<li>운영체제는 여러 파일에 레코드(데이터 단위)를 기록, 레코드를 조작하기 위한 별도의 프로그램을 필요</li>
+<li>즉, 운영체제의 지원으로 여러 파일에 나누어 정보를 영구 저장하고 운영하는 시스템</li>
+<li>데이터의 종속, 데이터의 중복, 데이터의 무결성 훼손 및 동시 접근 이상과 같은 문제점 있음</li>
+</ul>
+<h3 id="데이터의-종속"><a href="#데이터의-종속" class="headerlink" title="데이터의 종속"></a>데이터의 종속</h3><ul>
+<li>파일 처리 시스템에서는 파일들이 특정 프로그램에 종속됨</li>
+<li>데이터가 특정 프로그램에 종속될 경우, 데이터의 논리적인 구조나 위치의 변경이 애플리케이션 프로그램의 변경으로 이어지기 때문에 프로그램 유지보수에 많은 비용이 소요</li>
+<li>다른 프로그램과의 데이터 공유도 매우 어려워지게 됨</li>
+</ul>
+<h4 id="데이터-독립성-data-independency"><a href="#데이터-독립성-data-independency" class="headerlink" title="데이터 독립성(data independency)"></a>데이터 독립성(data independency)</h4><ul>
+<li>데이터와 애플리케이션 프로그램은 독립적으로 관리되어야 함.</li>
+<li>데이터를 효과적으로 활용하기 위해 반드시 필요한 전제조건</li>
+</ul>
+<h5 id="논리적-데이터-독립성-logical-data-independency"><a href="#논리적-데이터-독립성-logical-data-independency" class="headerlink" title="논리적 데이터 독립성(logical data independency)"></a>논리적 데이터 독립성(logical data independency)</h5><h5 id="물리적-데이터-독립성-physical-data-independency"><a href="#물리적-데이터-독립성-physical-data-independency" class="headerlink" title="물리적 데이터 독립성(physical data independency)"></a>물리적 데이터 독립성(physical data independency)</h5><h3 id="데이터의-중복"><a href="#데이터의-중복" class="headerlink" title="데이터의 중복"></a>데이터의 중복</h3><p>파일 처리 시스템에서 여러 파일에 중복적으로 저장될 수 있다<br>데이터 중복성 : 데이터가 여러 파일에 중복되어 저장되는 문제</p>
+<ul>
+<li>일관성(consistency) 문제: 하나의 사실을 나타내는 여러 개의 데이터가 존재할 때, 모든 데이터의 값이 논리적으로 같은 것.</li>
+<li>보안성(security) 문제 : 논리적으로 동등한 내용의 데이터에 대해서는 똑같은 수준의 보안이 유지되어야 한다.</li>
+<li>경제성(economics) 문제 : 데이터를 중복 저장하기 위해서는 추가적인 저장 공간이 필요하다. 또한 데이터 갱신 작업은 시스템의 갱신 비용이 높아진다.</li>
+</ul>
+<p>DBMS는 데이터의 종속 및 중복 문제를 해결하기 위해 제안된 시스템</p>
+<h3 id="데이터의-무결성-훼손"><a href="#데이터의-무결성-훼손" class="headerlink" title="데이터의 무결성 훼손"></a>데이터의 무결성 훼손</h3><p>데이터 무결성(data integrity) : 데이터베이스에서 관리되는 데이터의 정확성을 보장하는 것.<br>중복된 데이터가 서로 일치하지 않는 경우에도 발생.<br>중복이 발생하지 않는 경우에도 부정확한 데이터가 데이터베이스 안에 저장될 수 있다.<br>무결성 유지 : 데이터베이스 내에 훼손 문제를 방지하는 작업</p>
+<ul>
+<li>중앙통제에 의한 갱신 방법 : 검증 프로그램을 작성하여 모든 갱신 처리 작업 시 필수적으로 검증을 거치도록 통제한다.</li>
+</ul>
+<h3 id="동시-접근-이상"><a href="#동시-접근-이상" class="headerlink" title="동시 접근 이상"></a>동시 접근 이상</h3><p>DBMS에서 동일한 데이터에 대한 수정 요구가 동시에 발생한 경우 비정상적인 데이터 수정이 일어날 수 있다.<br>동시성이 제어되지 않는 시스템에서는 예측할 수 없는 잔액이 나타날 수 있다.<br>예측 불가능한 값이 발생하는 문제를 막기 위해 시스템은 어떤 형태로든 데이터 접근에 대한 통제를 가해야 한다.<br>DBMS에서는 이를 해결하기 위해 트랜잭션이라는 단위의 개념을 사용함으로써 동시 접근(concurrent access) 기능을 제공한다.</p>
+<h2 id="데이터베이스-관리-시스템의-특징"><a href="#데이터베이스-관리-시스템의-특징" class="headerlink" title="데이터베이스 관리 시스템의 특징"></a>데이터베이스 관리 시스템의 특징</h2><p>DBMS에서는 데이터가 중복되지 않도록 관리하고 여러 사용자가 동시에 접근 가능</p>
+<h3 id="자기-기술성"><a href="#자기-기술성" class="headerlink" title="자기 기술성"></a>자기 기술성</h3><p>데이터 자체뿐만 아니라 데이터에 대한 정의나 설명에 대한 부분까지 관리한다<br>시스템 카탈로그는 특정 데이터베이스에 저장된 파일의 구조를 파악하기 위한 데이터의 타입이나 포맷과 같은 정보를 담고 있다.<br>시스템 카탈로그에서 데이터베이스에 대한 정의를 참조하여 데이터베이스에 접근하므로 다양한 방법으로 데이터에 접근할 수 있다.</p>
+<h3 id="프로그램과-데이터의-독립성-및-추상화"><a href="#프로그램과-데이터의-독립성-및-추상화" class="headerlink" title="프로그램과 데이터의 독립성 및 추상화"></a>프로그램과 데이터의 독립성 및 추상화</h3><p>파일 처리 시스템에서는 데이터 파일이 애플리케이션 프로그램 내에 종속되어 있다<br>DBMS는 데이터 파일의 구조가 프로그램으로부터 분리되어 시스템 카달로그에 저장된다.<br>프로그램-데이터 독립성(program-data independency)</p>
+<h3 id="다중-뷰"><a href="#다중-뷰" class="headerlink" title="다중 뷰"></a>다중 뷰</h3><p>뷰(view) : 한 데이터 베이스에 대해 필요한 부분만 추출해서 볼 수 있도록 한다.<br>DBMS는 각각 사용자가 마치 독자적으로 데이터베이스에 접근하는 것처럼 보일 수 있도록 여러 개의 뷰를 제공한다.</p>
+<h3 id="다수-사용자-요청-처리"><a href="#다수-사용자-요청-처리" class="headerlink" title="다수 사용자 요청 처리"></a>다수 사용자 요청 처리</h3><p>DBMS 는 여러 사용자가 동시에 데이터베이스에 접근할 수 있는 기능을 제공한다.<br>특히 다수 사용자용 DBMS는 단일 논리적인 작업을 수행하는 일련의 명령문의 집합인 트랜잭션(transaction)과 동시성 제어(concurrency control)라는 기능이 내장되어 있다.<br>데이터의 일관성을 보장할 수 있다</p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>author: <a href="http://inakarune.github.io">SophiaY</a>
-            <p>url: <a href="http://inakarune.github.io/2018/05/15/Weapons-of-Jank-Destruction/">http://inakarune.github.io/2018/05/15/Weapons-of-Jank-Destruction/</a>
-            <p>date: <a href="http://inakarune.github.io/2018/05/15/Weapons-of-Jank-Destruction/">May 15th 2018, 5:29:51</a>
+            <p>url: <a href="http://inakarune.github.io/2019/01/28/About-Database/">http://inakarune.github.io/2019/01/28/About-Database/</a>
+            <p>date: <a href="http://inakarune.github.io/2019/01/28/About-Database/">January 28th 2019, 9:20:10</a>
             <!-- <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </div>
     
@@ -399,17 +450,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/05/15/About-responsive-web/" title= About responsive web >
-                    <div class="nextTitle">About responsive web</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/05/15/App-Lifecycles/" title= App Lifecycles >
-                    <div class="prevTitle">App Lifecycles</div>
+                <a href= "/2019/01/23/Divide-And-Conquer-Algorithm/" title= Divide And Conquer Algorithm >
+                    <div class="prevTitle">Divide And Conquer Algorithm</div>
                 </a>
             
         </li>
@@ -517,7 +563,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#데이터베이스의-이해"><span class="toc-number">1.</span> <span class="toc-text">데이터베이스의 이해</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#데이터베이스-시스템의-개요"><span class="toc-number">1.1.</span> <span class="toc-text">데이터베이스 시스템의 개요</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#데이터베이스-관리-시스템의-목적"><span class="toc-number">1.2.</span> <span class="toc-text">데이터베이스 관리 시스템의 목적</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#파일-처리-시스템-file-processing-system"><span class="toc-number">1.2.1.</span> <span class="toc-text">파일 처리 시스템(file processing system)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#데이터의-종속"><span class="toc-number">1.2.2.</span> <span class="toc-text">데이터의 종속</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#데이터-독립성-data-independency"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">데이터 독립성(data independency)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#논리적-데이터-독립성-logical-data-independency"><span class="toc-number">1.2.2.1.1.</span> <span class="toc-text">논리적 데이터 독립성(logical data independency)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#물리적-데이터-독립성-physical-data-independency"><span class="toc-number">1.2.2.1.2.</span> <span class="toc-text">물리적 데이터 독립성(physical data independency)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#데이터의-중복"><span class="toc-number">1.2.3.</span> <span class="toc-text">데이터의 중복</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#데이터의-무결성-훼손"><span class="toc-number">1.2.4.</span> <span class="toc-text">데이터의 무결성 훼손</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#동시-접근-이상"><span class="toc-number">1.2.5.</span> <span class="toc-text">동시 접근 이상</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#데이터베이스-관리-시스템의-특징"><span class="toc-number">1.3.</span> <span class="toc-text">데이터베이스 관리 시스템의 특징</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#자기-기술성"><span class="toc-number">1.3.1.</span> <span class="toc-text">자기 기술성</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#프로그램과-데이터의-독립성-및-추상화"><span class="toc-number">1.3.2.</span> <span class="toc-text">프로그램과 데이터의 독립성 및 추상화</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#다중-뷰"><span class="toc-number">1.3.3.</span> <span class="toc-text">다중 뷰</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#다수-사용자-요청-처리"><span class="toc-number">1.3.4.</span> <span class="toc-text">다수 사용자 요청 처리</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
