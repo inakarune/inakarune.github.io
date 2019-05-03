@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>개발괴발</title>
+    <title>Transaction · 개발괴발</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180501 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180501 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
         
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -191,12 +193,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >개발괴발</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Transaction</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>개발괴발</a>
 </header>
@@ -210,24 +223,61 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Transaction
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2019/05/03</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -331,289 +381,49 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/28/About-Database/" >
-                
-                    <span>About Database</span>
-            </a>
-            <div class="abstract-content">
-                학습목표
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>학습목표</p>
+<p>트랜잭션의 기초적인 개념에 대하여 알아보고 은행 시스템의 예를 통해 트랜잭션이 동작하는 방식과 트랜잭션을 제어하기 위한 직렬화와 회복화의 기능에 대하여 학습한다.</p>
+<h3 id="주요용어"><a href="#주요용어" class="headerlink" title="주요용어"></a>주요용어</h3><p>ACID 특성 - 트랜잭션이 안전하게 수행되는 것을 보장하기 위해 만족되어야 하는 원자성, 일관성, 고립성 및 지속성<br>동시성 제어 - 다중 사용자 환경을 지원하는 데이터베이스 시스템에서 데이터의 일관성을 유지하면서 동시에 실행도리 수 있도록 트랜잭션을 제어하는 기능<br>직렬 스케줄 - 하나의 트랜잭션에 대해 트랜잭션에 포함된 모든 연산이 연속적으로 실행되는 스케줄<br>우선순위 그래프 - 스케줄의 충돌 직렬성 여부를 결정하기 위해 트랜잭션을 노드로 트랜잭션 사이의 자원 연산 순서를 간선으로 표현한 그래프</p>
 
-데이터베이스란?
-기존 파일 처리 시스템과의 차이점
-다양한 데이터 모델에 기반하는 데이터베이스의 특징과 장단점
-데이터베이스 사용자 유형에 따른 역할과 데이터베이스의 구조 등 데이터베이스와 관련된 전반적인 개념
-
-주요용어
-데이터베이스 관리 시스템(DBMS), 스키마, 인스턴스, 데이터 모델, 트랜잭션, DBMS 3단계 구조
-데이터베이스의 이해데이터베이스 시스템의 개요데이터베이스 : 데이터의 집합데이터베이스 관리 시스템(DBMS: Database Management System) : 컴퓨터를 사용하여 데이터베이스를 관리할...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/28</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
+    </article>
+    <!-- license  -->
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Database">Database</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/23/Divide-And-Conquer-Algorithm/" >
-                
-                    <span>Divide And Conquer Algorithm</span>
-            </a>
-            <div class="abstract-content">
-                분할정복 알고리즘분할정복 방법의 원리분할정복(divide-and-conquer) : 순환적으로 문제를 푸는 하향식 접근방법주어진 문제의 입력을 더 이상 나눌 수 없을 때까지 두 개 이상의 작은 문제들로 순환적으로 분할하고, 이렇게 분할된 작은 문제들을 각각 해결한 후 이들의 해를 결합하여 원래의 문제의 해를 구하는 방식
-
-분할(divide) : 주어진 문제의 입력을 여러 개의 작은 문제로 분할
-정복(conquer) : 작은 문제들을 순환적으로 분할.
-결합(combine) : 정복된 해를 결합하여 원래 문제의 해를 구한다.
-
-이...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/23</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Algorithm">Algorithm</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/23/Algorithm Introduction/" >
-                
-                    <span>알고리즘 소개</span>
-            </a>
-            <div class="abstract-content">
-                학습목표 
-
-알고리즘의 중요성과 개념을 이해할 수 있다.
-배열과 연결 리스트의 개념과 장단점을 이해할 수 있다.
-스택과 큐의 개념과 특징을 이해할 수 있다.
-트리와 그래프의 개념, 용어 및 특징을 이해할 수 있다.
-
-알고리즘 소개알고리즘의 개념컴퓨터를 이용한 문제 해결 능력은 주어진 문제에 대한 알고리즘의 존재 유무가 결정컴퓨터과학 : “알고리즘과 관련된 이슈를 다루는 학문”알고리즘 : 주어진 문제를 해결하기 위한 명령어들을 단계젹으로 나열한 것만족해야 할 조건 -&gt; 입출력, 명확성, 유한성, 유효성
-
-알고리즘 생성 과정...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/23</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Algorithm">Algorithm</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/20/SVG/" >
-                
-                    <span>SVG</span>
-            </a>
-            <div class="abstract-content">
-                더 복잡하거나 필수적인 SVG의 경우 HTML에 SVG를 마크업으로 추가하는 것을 고려해야 한다.마크업에 SVG를 추가하면 페이지가 잠재적으로 더 무겁고 느려지지만 자바스크립트와 CSS를 사용하면 이미지의 스타일과 애니메이션을 조작할 수 있는 더 많은 옵션을 사용할 수 있다.
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/20</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/16/CSS-Architect/" >
-                
-                    <span>CSS Architect</span>
-            </a>
-            <div class="abstract-content">
-                CSS Architectthe think - build - architect mindsetthink -&gt; build -&gt; architect
-think : Think about the layout of your webpage or web app before writing code.build : your layout in html and css with a consistent structure for naming classes.architect : create a logical architecture for your C...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/16</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CSS">CSS</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/15/The-Box-Models/" >
-                
-                    <span>The Box Models</span>
-            </a>
-            <div class="abstract-content">
-                The Box Model
-content: text, images, etc.
-padding: transparent area around the content, inside of the box
-border: goes around the padding and the content.
-margin: space between boxes.
-
-Heights and widthstotal width = right border + right padding + specified width + left padding + left bordertotal...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/15</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CSS">CSS</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/13/Link-import-CSS/" >
-                
-                    <span>Link, import CSS</span>
-            </a>
-            <div class="abstract-content">
-                link rel로 CSS chunk file을 html에 선언하고 css파일에서 필요한 파트로 나눈 css를 import를 하는 게 효율적이다.
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/13</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "CSS">CSS</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/10/Session/" >
-                
-                    <span>Session</span>
-            </a>
-            <div class="abstract-content">
-                
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/10</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/08/Parallel-Computing/" >
-                
-                    <span>Parallel Computing</span>
-            </a>
-            <div class="abstract-content">
-                
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/08</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/01/02/Preload-Prefetch/" >
-                
-                    <span>Preload, Prefetch</span>
-            </a>
-            <div class="abstract-content">
-                preload, prefetch의 차이점
-preload는 선언전 fetch.
-document의 onload event를 막지 않으면서 브라우저가 자원을 요청하도록 강제할 수 있다.
-prefetch는 자원이 필요할 수도 있다는 것을 브라우저에게 힌트를 주지만 로딩할 지 말지는 브라우저가 결정하게 한다.
-현재 페이지에서 사용될 거라 확신이 드는 자원들은 preload하라. 
-미래의 여러 navigation boundaries에서 사용될 거라 생각되는 자원들은 prefetch하라.
-preload는 브라우저에게 페이지에서 필요한 자원...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/01/02</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
+        <div class="license-wrapper">
+            <p>author: <a href="http://inakarune.github.io">SophiaY</a>
+            <p>url: <a href="http://inakarune.github.io/2019/05/03/Transaction/">http://inakarune.github.io/2019/05/03/Transaction/</a>
+            <p>date: <a href="http://inakarune.github.io/2019/05/03/Transaction/">May 3rd 2019, 8:21:47</a>
+            <!-- <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/05/01/Recovery-System/" title= Recovery System >
+                    <div class="prevTitle">Recovery System</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2019/01/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/01/page/2/">NEXT &#62;</a>
-    </nav>
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -688,6 +498,24 @@ preload는 브라우저에게 페이지에서 필요한 자원...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#주요용어"><span class="toc-number">1.</span> <span class="toc-text">주요용어</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1724,6 +1552,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
     
     </body>
 </html>
