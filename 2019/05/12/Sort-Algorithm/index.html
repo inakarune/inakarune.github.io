@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>개발괴발</title>
+    <title>Sort Algorithm · 개발괴발</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180501 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180501 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
         
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -191,12 +193,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >개발괴발</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Sort Algorithm</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>개발괴발</a>
 </header>
@@ -210,24 +223,61 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Sort Algorithm
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2019/05/12</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -331,255 +381,98 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/27/semantic-html/" >
-                
-                    <span>Semantic html</span>
-            </a>
-            <div class="abstract-content">
-                ARTICLESarticle element는 웹페이지에서 독립적인 기사를 대표한다. 페이지에서 뽑아 내고 전혀 다른 컨텍스트에서 배포 할 수 있는 콘텐츠만 포장해야 한다. 예를 들어, Flipboard와 같은 앱은 사이트에서 article 요소를 가져 와서 자체 앱에 표시하고 독자에게 완벽하게 이해할 수 있어야 한다. article을 사용하여 페이지의 주요 콘텐츠를 다음과 같이 자체 포함 단위로 표시 할 수 있다.
-12345678910&lt;article&gt;    &lt;h1&gt;Semantic HTML&lt;/h1&gt...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/27</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "html">html</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/26/angular-ng-new-trouble/" >
-                
-                    <span>angular ng new trouble</span>
-            </a>
-            <div class="abstract-content">
-                
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/26</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/26/ethreum/" >
-                
-                    <span>ethreum</span>
-            </a>
-            <div class="abstract-content">
-                1$ geth --dev
-12$ geth attach ipc://geth.ipc가 있는 url$ personal.newAccount('test')
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>학습목표</p>
+<ol>
+<li>정렬과 관련된 용어 및 개념을 이해할 수 있다.</li>
+<li>버블 정렬의 개념, 동작, 그리고 성능과 특징을 이해할 수 있다.</li>
+<li>삽입 정렬의 개념, 동작, 그리고 성능과 특징을 이해할 수 있다.</li>
+<li>선택 정렬의 개념, 동작, 그리고 성능과 특징을 이해할 수 있다.</li>
+<li>셸 정렬의 개념, 동작, 그리고 성능과 특징을 이해할 수 있다.</li>
+</ol>
+<p>정리하기</p>
+<ol>
+<li>정렬의 개념</li>
+</ol>
+<ul>
+<li>내부 정렬: 모든 데이터를 주기억장치에 저장한 후 정렬하는 방식 vs 외부정렬</li>
+<li>안정적 정렬: 동일한 값을 데이터들에 대한 정렬 전의 상대적인 순서가 정렬 후에도 그대로 유지되는 정렬 방식</li>
+<li>제자리 정렬: 입력 데이터를 저장하는 공간 이외에 추가적인 저장 공간을 상수 개만 사용하는 정렬 방식</li>
+<li>비교 기반 정렬: 두 값 전체를 직접적으로 비교하여 어떤 값이 큰 지 또는 작은 지를 결정하여 정렬하는 방식(버블 정렬, 선택 정렬, 삽입 정렬, 셸 정렬, 합병 정렬, 퀵 정렬, 힙 정렬) vs 데이터 분포 기반 정렬(값의 분포 정보를 활용하여 정렬을 수행하는 방식 -&gt; 계수 정렬, 기수 정렬)</li>
+</ul>
+<ol start="2">
+<li>버블 정렬</li>
+</ol>
+<ul>
+<li>왼쪽(또는 오른쪽)에서부터 모든 인접한 두 값을 비교하여 왼쪽의 값이 더 큰 경우에는 자리를 바꾸는 과정을 반복해서 정렬하는 방식</li>
+<li>O(n^2), 안정적, 제자리</li>
+<li>자리바꿈이 한번도 발생하지 않으면 알고리즘이 종료되도록 개선 가능 -&gt; 데이터가 정렬된 경우에는 O(n)</li>
+</ul>
+<ol start="3">
+<li>선택 정렬</li>
+</ol>
+<ul>
+<li>주어진 데이터 중에서 최솟값을 차례대로 선택해서 나열하는 방식</li>
+<li>O(n^2), 불안정적, 제자리</li>
+<li>데이터의 입력 상태에 민감하지 않음 -&gt; 언제나 동일한 시간 복잡도를 가짐</li>
+</ul>
+<ol start="4">
+<li>삽입 정렬</li>
+</ol>
+<ul>
+<li>주어진 데이터를 하나씩 뽑은 후, 나열된 데이터들이 항상 정렬된 형태를 가지도록 뽑은 데이터를 바른 위치를 찾아 삽입해서 나열하는 방식</li>
+<li>O(n^2), 안정적, 제자리</li>
+<li>입력이 제 순서대로 거의 정렬된 경우 -&gt; O(n)</li>
+</ul>
+<ol start="5">
+<li>셸 정렬</li>
+</ol>
+<ul>
+<li>삽입 정렬의 단점 보완 -&gt; 데이터가 삽입될 위치에서 많이 떨어져 있어도 한번에 한자리씩만 이동하므로 제자리를 찾아가는 데 느리다.</li>
+<li>처음에는 멀리 떨어진 두 원소를 비교/교환하고 점차적으로 가까운 위치의 원소를 비교/교환한 뒤, 맨 마지막에는 인접한 원소를 비교/교환하는 정렬 방식 -&gt; 입력 배열을 부분배열로 나누어 삽입 정렬을 수행하는 과정을 부분배열의 크기와 개수를 줄여가면서 반복적으로 수행</li>
+<li>간격의 크기는 부분배열의 개수이며, 동시에 부분배열에서 이웃한 원소간의 거리를 의미</li>
+<li>O(n^2), 불안정적, 제자리</li>
+<li>간격의 크기를 계산하는 방식에 따라 성능이 달라짐</li>
+</ul>
 
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/26</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
+    </article>
+    <!-- license  -->
     
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/High-performance-HTML/" >
-                
-                    <span>High performance HTML</span>
-            </a>
-            <div class="abstract-content">
-                페이지에서 html의 복잡성과 element의 갯수를 줄이는 게 파싱 타임을 많이 향상하진 않는다.하지만 잘 만들어진 HTML은 다른 뷰포트 크기에 성공적으로 반응하는 빠른 로딩 페이지 및 레이아웃을 작성하는 데 중요한 토대이다.
-빠르게 로드되고 다양한 장치에서 잘 작동하는 컨텐트를 만들 수있는 깨끗하고 간결한 HTML을 작성하는 방법을 설명한다.이 과정에서 디버그 및 유지 관리가 쉬운 사이트 및 앱을 만드는 방법을 배우게 된다.
-123456789101112131415161718192021222324252627282930313...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "html">html</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/Kotlin-Basic/" >
-                
-                    <span>Kotlin Basic</span>
-            </a>
-            <div class="abstract-content">
-                
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "kotlin">kotlin</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/How-to-deploy-web-app-in-aws/" >
-                
-                    <span>How to deploy web app in aws</span>
-            </a>
-            <div class="abstract-content">
-                기술스택: angular5, mongoDB, node, aws deploy(ec2, s3)
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "aws">aws</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "angular">angular</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "mongoDB">mongoDB</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "node">node</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "deploy">deploy</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/About-responsive-web/" >
-                
-                    <span>About responsive web</span>
-            </a>
-            <div class="abstract-content">
-                
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/Weapons-of-Jank-Destruction/" >
-                
-                    <span>Weapons of Jank Destruction</span>
-            </a>
-            <div class="abstract-content">
-                chrome dev tool의 timeline을 통해 퍼포먼스 디버깅이 가능하다.timeline은 프로젝트에서 1초당 프레임을 추적하게 한다.타임라인을 녹음할 수 있고 각 프레임당 어떤 작업이 포함되는지도 알 수 있다.더 자세히..https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool?hl=ko
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/App-Lifecycles/" >
-                
-                    <span>App Lifecycles</span>
-            </a>
-            <div class="abstract-content">
-                Rail Model(사용자 중심 성능 모델)• Response : 100ms이내에 응답• Animate : 16ms(브라우저가 새 프레임을 화면에 만드는 시간을 계산한다면 코드는 10ms이내에 실행을 마쳐야 함)• Idle : 50ms• Load : 1 second(1초 내로 사이트를 로드)• 성능(퍼포먼스) 개선 노력의 초점을 사용자에게 맞춰야 한다. 성능 지연을 사용자가 어떻게 받아들이는지 파악.Rail more detail(https://developers.google.com/web/fundamentals/performa...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/05/15/The-Critical-Rendering-Path/" >
-                
-                    <span>The Critical Rendering Path </span>
-            </a>
-            <div class="abstract-content">
-                왜 1초당 60프레임에 신경써야 하는지?1초에 60프레임1프레임당 16ms가 랜더링하는데 소요된다.Making a frame랜더트리(Render tree)는 DOM과 비슷하지만 몇몇 점이 다르다.예를 들어 element에 적용한 css가 display: none이라면 랜더 트리에 나타나지 않는다.javascript -&gt; style -&gt; layout -&gt; paint -&gt; composite• javascript or web animation api, css animation
-
-css나 javascript 같은...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/15</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
+        <div class="license-wrapper">
+            <p>author: <a href="http://inakarune.github.io">SophiaY</a>
+            <p>url: <a href="http://inakarune.github.io/2019/05/12/Sort-Algorithm/">http://inakarune.github.io/2019/05/12/Sort-Algorithm/</a>
+            <p>date: <a href="http://inakarune.github.io/2019/05/12/Sort-Algorithm/">May 12th 2019, 9:02:41</a>
+            <!-- <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/05/03/Transaction/" title= Transaction >
+                    <div class="prevTitle">Transaction</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2018/05/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/05/page/2/">NEXT &#62;</a>
-    </nav>
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -654,6 +547,24 @@ css나 javascript 같은...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1752,6 +1663,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
     
     </body>
 </html>
