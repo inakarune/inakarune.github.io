@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>개발괴발</title>
+    <title>Currency Control · 개발괴발</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180501 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180501 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
         
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -191,14 +193,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >개발괴발</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Currency Control</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>개발괴발</a>
 </header>
@@ -219,17 +230,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/rose.JPG)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            개발괴발
-            <!-- 文章页  -->
+            Currency Control
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -237,12 +248,36 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                ...
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2019/05/12</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -346,405 +381,74 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/05/12/Currency-Control/" >
-                
-                    <span>Currency Control</span>
-            </a>
-            <div class="abstract-content">
-                #13강. 동시성 제어
-학습목표
-트랜잭션 간 연산 순서를 제어하여 데이터의 무결성을 유지하면서 동시 실행하는 트랜잭션의 수를 최대한으로 높이기 위한 락 기반 규약, 타임스탬프 기반 규악, 검증 기반 규약 등 다양한 동시성 제어 기법에 대하여 학습한다.
-주요용어
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>#13강. 동시성 제어</p>
+<p>학습목표</p>
+<p>트랜잭션 간 연산 순서를 제어하여 데이터의 무결성을 유지하면서 동시 실행하는 트랜잭션의 수를 최대한으로 높이기 위한 락 기반 규약, 타임스탬프 기반 규악, 검증 기반 규약 등 다양한 동시성 제어 기법에 대하여 학습한다.</p>
+<p>주요용어</p>
+<ul>
+<li>양립성 함수: 락의 종류에 따라 동시에 수락될 수 있는지 판단하는 함수</li>
+<li>2단계 락킹 규약: 요청 단계에서 트랜잭션은 락을 추가 요청할 수 있으며, 반납 단계 부터는 락을 반납만 해야 하는 방식으로 직렬성을 보장하는 규약</li>
+<li>토마스 기록 규칙: 타임스탬프 기반 규약의 규칙으로 오래된 쓰기를 무시하는 규칙</li>
+<li>교착상태: 특정 트랜잭션 집합 내에 속하는 모든 트랜잭션이 집합 내의 다른 트랜잭션을 기다리고 있는 상태</li>
+<li>대기 그래프: 트랜잭션을 정점으로 한 트랜잭션이 점유한 데이터 항목을 다른 트랜잭션이 요청하는 상황을 간선으로 표현한 그래프</li>
+</ul>
+<p>정리하기</p>
+<ol>
+<li><p>동시성 제어는 다수의 트랜잭션이 동시에 동일한 데이터에 대해 읽기 연산을 수행하거나 갱신 연산을 수행하려고 할 때, 데이터의 무결성을 유지하면서도 동시에 실행될 수 있는 트랜잭션의 수를 제어하는 기법이다.</p>
+</li>
+<li><p>대표적인 동시성 제어 기법에는 락킹, 타임스탬프, 스냅샷 기반 규약이 있다.</p>
+</li>
+<li><p>락(lock)이란 한 트랜잭션이 데이터 항목에 접근하는 동안에는 다른 트랜잭션이 그 데이터 항목에 접근하는 것을 제어하는 기법이다.</p>
+</li>
+<li><p>락킹 기법에는 공유 락과 배타락이 있다. 양립성 함수에 근거하여 트랜잭션간 락의 획득 및 실행 진행 또는 대기 여부를 결정하여 트랜잭션 실행 순서를 결정한다.</p>
+</li>
+<li><p>2단계 락킹 규약은 각 트랜잭션이 락을 요청하는 단계와 언락을 요청하는 두 단계로 구성하여 트랜잭션 실행을 진행시킨다. 트랜잭션은 요청 단계에서부터 시작되며 필요에 따라 락을 요쳥할 수 있다. 만약 트랜잭션이 하나의 락을 반납하게 되면 그 때부터 트랜잭션은 반납 단계로 되며 더이상 락 요청을 할 수 없다.</p>
+</li>
+<li><p>타임스탬프 순서 기법은 트랜잭션 충돌을 위해 직렬 가능한 순서를 정하는 데 가장 많이 사용하는 방법으로, 시스템의 각 트랜잭션마다 고유한 타임 스탬프를 부여하고 타임스탬프로 실행 순서를 결정한다.</p>
+</li>
+</ol>
 
-양립성 함수: 락의 종류에 따라 동시에 수락될 수 있는지 판단하는 함수
-2단계 락킹 규약: 요청 단계에서 트랜잭션은 락을 추가 요청할 수 있으며, 반납 단계 부터는 락을 반납만 해야 하는 방식으로 직렬성을 보장하는 규약
-토마스 기록 규칙: 타임스탬프 기반 규약의 규칙으...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/12</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
+    </article>
+    <!-- license  -->
     
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/05/12/Sort-Algorithm/" >
-                
-                    <span>Sort Algorithm</span>
-            </a>
-            <div class="abstract-content">
-                학습목표
-
-정렬과 관련된 용어 및 개념을 이해할 수 있다.
-버블 정렬의 개념, 동작, 그리고 성능과 특징을 이해할 수 있다.
-삽입 정렬의 개념, 동작, 그리고 성능과 특징을 이해할 수 있다.
-선택 정렬의 개념, 동작, 그리고 성능과 특징을 이해할 수 있다.
-셸 정렬의 개념, 동작, 그리고 성능과 특징을 이해할 수 있다.
-
-정리하기
-
-정렬의 개념
-
-
-내부 정렬: 모든 데이터를 주기억장치에 저장한 후 정렬하는 방식 vs 외부정렬
-안정적 정렬: 동일한 값을 데이터들에 대한 정렬 전의 상대적인 순서가 정렬 후에도 그대로 유지되는 정렬...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/12</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/05/03/Transaction/" >
-                
-                    <span>Transaction</span>
-            </a>
-            <div class="abstract-content">
-                학습목표
-트랜잭션의 기초적인 개념에 대하여 알아보고 은행 시스템의 예를 통해 트랜잭션이 동작하는 방식과 트랜잭션을 제어하기 위한 직렬화와 회복화의 기능에 대하여 학습한다.
-주요용어ACID 특성 - 트랜잭션이 안전하게 수행되는 것을 보장하기 위해 만족되어야 하는 원자성, 일관성, 고립성 및 지속성동시성 제어 - 다중 사용자 환경을 지원하는 데이터베이스 시스템에서 데이터의 일관성을 유지하면서 동시에 실행도리 수 있도록 트랜잭션을 제어하는 기능직렬 스케줄 - 하나의 트랜잭션에 대해 트랜잭션에 포함된 모든 연산이 연속적으로 실행되는 ...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/03</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/05/01/Recovery-System/" >
-                
-                    <span>Recovery System</span>
-            </a>
-            <div class="abstract-content">
-                14강. 회복 시스템학습목표
-회복 시스템에서 개념과 적용되는 회복 기술에 대하여 학습하고 회복에 필요한 백업 및 로그 기반 회복 기술 그리고 체크포인트 기법에 대하여 살펴본다.
-주요용어
-
-버퍼 블럭: 디스크로부터 읽어들여져 주기억장치에서 임시적으로 있는 블럭
-로그 레코드: 데이터베이스가 수행하는 모든 수정 작업을 기록한 데이터
-WAL: 데이터베이스 수정 전, 로그 레코드를 생성하여 기록하여 변경 기록에 대한 로그를 안정하게 저장하는 기법
-체크포인트: 회복 작업에 소모되는 비용 감소를 위해 주기적으로 모든 수정 작업을 중단하고 ...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/01</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/03/28/Javascript-Object/" >
-                
-                    <span>Javascript Object</span>
-            </a>
-            <div class="abstract-content">
-                12강. 자바스크립트 객체
-학습목표
-
-객체, 메서드, 속성, 이벤트의 개념을 이해할 수 있다.
-자바스크립트에서 객체를 생성하고 이벤트를 활용할 수 있다.
-다양한 내장 객체의 메서드와 속성을 활용할 수 있다.
-
-객체
-속성과 메서드로 이루어짐.
-속성 - 객체의 특징 및 상태를 표현메서드 - 객체가 행하는 동작/연산
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/28</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/03/28/Javascript/" >
-                
-                    <span>Javascript</span>
-            </a>
-            <div class="abstract-content">
-                학습목표
-
-자바스크립트의 필요성과 특징을 이해할 수 있다.
-자바스크립트의 기초적인 구문을 활용한 프로그래밍을 할 수 있다.
-자바스크립트의 대화상자를 활용할 수 있다.
-
-html -  웹페이지의 내용을 담당CSS -  웹 페이지의 디자인을 담당Javascript - 웹페이지의 동작을 담당(사용자와 페이지 간의 상호작용이 가능), 사용자에게 생동감 있는 동적인 웹페이지 제공
-자바스크립트를 html에서 사용하는 방식
-
-내부 스크립트 방식
-외부 스크립트 방식
-인라인 스크립트 방식
-
-식별자 지정
-변수 이름에 하이픈을 사용하면 안됨숫자로...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/28</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/03/23/CSS-property-2/" >
-                
-                    <span>CSS property(2)</span>
-            </a>
-            <div class="abstract-content">
-                학습목표
-
-CSS의 텍스트 관련 속성을 활용할 수 있다.
-
-CSS의 박스 모델과 관련된 다양한 속성을 활용할 수 있다.
-
-
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/23</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/03/23/CSS-property/" >
-                
-                    <span>CSS property(1)</span>
-            </a>
-            <div class="abstract-content">
-                학습목표
-
-CSS에서의 다양한 색상 지정 방법을 활용할 수 있다.
-
-CSS의 글꼴 관련 속성을 활용할 수 있다.
-
-CSS의 텍스트 관련 속성을 활용할 수 있다.
-
-
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/23</span>
-                </div>
-                <!-- tags  -->
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/02/19/HTML-Summary/" >
-                
-                    <span>HTML Summary</span>
-            </a>
-            <div class="abstract-content">
-                학습목표
-
-HTML과 관련된 다양한 개념과 장단점을 이해할 수 있다.
-HTML 문서 작성과 실행을 위해 필요한 프로그램을 이용할 수 있다.
-HTML 문서의 구성요소와 구조를 이해하고 문서를 작성하고 실행할 수 있다.
-
-주요용어하이퍼텍스트, 마크업, 마크업 언어, HTML, W3C, 웹브라우저, 요소, 태그, 속성(attribute), 속성값, &lt;!DOCTYPE html&gt;, , , , , 
-HTMLSGML에서 유래함.배우기 쉬움.
-SGML강력한 표현력으로 쓰기 어려워 군수, 과학 등 특수 분야에서만 사용됨.
-XMLSG...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "HTML">HTML</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/02/19/Database-Modeling/" >
-                
-                    <span>Database Modeling</span>
-            </a>
-            <div class="abstract-content">
-                학습목표
-
-데이터베이스 구조를 도출하기 위해 필요한 전반적인 모델링 과정
-개념적 데이터 모델링에서 사용하는 ER 모델의 요소 및 ER 모델링 방법
-
-주요용어사용자 요구사항 분석, 키 속성, 사상수, 약한 관계
-데이터베이스 모델링데이터 모델링 단계개념적 데이터 모델링사용자 요구사항
-논리적 데이터 모델링물리적 데이터 모델링데이터베이스에 관련된 설정
-ER 모델개체속성
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/19</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Database">Database</a>
-    
-</div>
-                
-            </div>
-        </article>
+        <div class="license-wrapper">
+            <p>author: <a href="http://inakarune.github.io">SophiaY</a>
+            <p>url: <a href="http://inakarune.github.io/2019/05/12/Currency-Control/">http://inakarune.github.io/2019/05/12/Currency-Control/</a>
+            <p>date: <a href="http://inakarune.github.io/2019/05/12/Currency-Control/">May 12th 2019, 9:37:09</a>
+            <!-- <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/05/12/Sort-Algorithm/" title= Sort Algorithm >
+                    <div class="prevTitle">Sort Algorithm</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">NEXT &#62;</a>
-    </nav>
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" src= /avatar/Misaka.jpg >
-    <div class="profile-name">sophiaY</div>
-    
-    <div class="profile-signature">
-        그저 묵묵히 할 뿐
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:inakarune@naver.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/inakarune" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title=wechat>
-                  
-                  <img class="profile-qr" src="/SNS 안해요오" />
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href= //www.naver.com target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.google.com target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -817,6 +521,24 @@ ER 모델개체속성
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1903,6 +1625,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
     
     </body>
 </html>
