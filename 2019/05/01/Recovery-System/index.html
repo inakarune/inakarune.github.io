@@ -392,6 +392,18 @@ height:50vh;
 <li>WAL: 데이터베이스 수정 전, 로그 레코드를 생성하여 기록하여 변경 기록에 대한 로그를 안정하게 저장하는 기법</li>
 <li>체크포인트: 회복 작업에 소모되는 비용 감소를 위해 주기적으로 모든 수정 작업을 중단하고 메인 메모리상의 수정된 모든 버퍼블럭을 디스크에 반영시키는 기법</li>
 </ul>
+<p>학습정리</p>
+<ol>
+<li>데이터 회복은 데이터베이스 운영 도중에 발생하는 예기치 못한 실패나 고장이 발생한 경우 데이터베이스를 실패 및 고장 발생 이전의 일관적인 상태로 되돌리는 작업을 의미한다.</li>
+<li>실패 유형에는 논리적 오류나 버퍼 오버플로 등의 요일에 의한 트랜잭션 실패, 하드웨어 고장 등으로 인한 시스템 장애, 디스크 손상으로 인한 디스크 실패가 있다.</li>
+<li>디스크와 주기억장치는 블럭 단위로 데이터를 주고 받는다. 디스크상의 블록은 물리적 블럭이라 하고, 주기억장치상의 블럭은 버퍼 블럭이라고 부른다. 데이터베이스 응용에서의 데이터 조작은 버퍼 블럭에서 이루어지며, 트랜잭션 완료나 버퍼의 여유 공간이 없을 때 버퍼 블럭이 디스크에 기록된다.</li>
+<li>데이터베이스 회복을 위해 가장 많이 사용되는 방법은 로그 기반 회복 기법이다. 데이터베이스 시스템은 모든 수정 작업에 대한 로그를 기록한다. 로그는 유사시 데이터베이스를 이전 상태로 복구하는 데에 사용된다.</li>
+<li>데이터베이스 회복 시 각각의 트랜잭션은 Redo나 Undo된다. 문제없이 진행되어야 했을 트랜잭션의 경우 Redo되며, 완료되지 못한 상황에서 예기치 않게 종료되어 데이터베이스의 일관성을 해칠 위험이 있는 트랜잭션의 경우 Undo된다.</li>
+<li>로그가 지나치게 오랜 기간 쌓일 경우 시스템 장애 발생 시 재실행해야 할 작업량이 방대해지기 때문에 체크포인트를 실행하여 로그를 처음부터 볼 필요 없이 만든다.</li>
+<li>체크포인트를 생성하는 작업은 메모리에 존재하는 모든 로그 레코드를 안정 저장장치로 기록한 후, 수정된 모든 버퍼 블럭을 디스크에 반영한다. 이후 현재 실행중인 트랜잭션의 리스트를 표시한 안정 저장장치에 기록한다.</li>
+<li>회복 과정은 오류 발생 기전까지 트랜잭션의 실행 상태에 따라 Redo 또는 Undo 작업으로 분류된다. 정상적으로 완료된 트랜잭션에 대해서 Redo를 실행하며 불완전 실행된 트랜잭션은 로그를 역순으로 읽어 트랜잭션 실행 전까지 되돌린다.</li>
+<li>체크포인트를 사용하는 시스템에 대해서는 마지막 체크포인트를 확인하고 그 이후의 로그에 대해서만 정상적으로 반영되었는지 확인하여 Redo 또는 Undo하면 무결한 데이터베이스를 유지할 수 있다.</li>
+</ol>
 
     </article>
     <!-- license  -->
@@ -1230,34 +1242,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 48 </div>
     
     <div class="post-archive">
@@ -1295,12 +1279,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2019/03/23/CSS-property/" >CSS property(1)</a>
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2019/03/23/CSS-property-2/" >CSS property(2)</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2019/03/23/CSS-property-2/" >CSS property(2)</a>
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2019/03/23/CSS-property/" >CSS property(1)</a>
         </li>
     
     
@@ -1414,12 +1398,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >CSS</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >CSS</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
         </li>
     
     
@@ -1528,9 +1512,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="CSS"><span class="iconfont-archer">&#xe606;</span>CSS</span>
     
-        <span class="sidebar-tag-name" data-tags="HTML"><span class="iconfont-archer">&#xe606;</span>HTML</span>
-    
         <span class="sidebar-tag-name" data-tags="html"><span class="iconfont-archer">&#xe606;</span>html</span>
+    
+        <span class="sidebar-tag-name" data-tags="HTML"><span class="iconfont-archer">&#xe606;</span>HTML</span>
     
         <span class="sidebar-tag-name" data-tags="aws"><span class="iconfont-archer">&#xe606;</span>aws</span>
     
@@ -1585,9 +1569,9 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="CSS"><span class="iconfont-archer">&#xe60a;</span>CSS</span>
     
-        <span class="sidebar-category-name" data-categories="HTML"><span class="iconfont-archer">&#xe60a;</span>HTML</span>
-    
         <span class="sidebar-category-name" data-categories="html"><span class="iconfont-archer">&#xe60a;</span>html</span>
+    
+        <span class="sidebar-category-name" data-categories="HTML"><span class="iconfont-archer">&#xe60a;</span>HTML</span>
     
         <span class="sidebar-category-name" data-categories="aws"><span class="iconfont-archer">&#xe60a;</span>aws</span>
     
