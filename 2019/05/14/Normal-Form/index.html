@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>알고리즘 소개 · 개발괴발</title>
+    <title>Normal Form · 개발괴발</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -207,7 +207,7 @@
                 <a href="/" >개발괴발</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">알고리즘 소개</a>
+                <a href="#" class="post-name">Normal Form</a>
             </div>
     </div>
     
@@ -239,7 +239,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            알고리즘 소개
+            Normal Form
             <!-- 404 -->
             
         </h1>
@@ -257,7 +257,7 @@ height:50vh;
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2019/01/23</span>
+                <span class="post-intro-time">2019/05/14</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -383,32 +383,37 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="알고리즘-소개"><a href="#알고리즘-소개" class="headerlink" title="알고리즘 소개"></a>알고리즘 소개</h1><h2 id="알고리즘의-개념"><a href="#알고리즘의-개념" class="headerlink" title="알고리즘의 개념"></a>알고리즘의 개념</h2><ul>
-<li>컴퓨터를 이용한 문제 해결 능력은 주어진 문제에 대한 알고리즘의 존재 유무가 결정</li>
-<li>컴퓨터과학 : “알고리즘과 관련된 이슈를 다루는 학문”</li>
-<li>알고리즘 : 주어진 문제를 해결하기 위한 명령어들을 단계젹으로 나열한 것<br>만족해야 할 조건 -&gt; 입출력, 명확성, 유한성, 유효성</li>
-<li>알고리즘 생성 과정 : 설계 -&gt; 기술(표현) -&gt; 정확성 분석 -&gt; 효율성 분석<ul>
-<li>기술 방법 -&gt; 일상적인 언어, 순서도, 의사 코드 등</li>
-</ul>
+        <h1 id="6강-정규형의-적용"><a href="#6강-정규형의-적용" class="headerlink" title="6강. 정규형의 적용"></a>6강. 정규형의 적용</h1><h5 id="학습목표"><a href="#학습목표" class="headerlink" title="학습목표"></a>학습목표</h5><p>함수적 종속성, 클로저와 카노니컬 커버의 개념을 활용하여</p>
+<p>제1정규형부터 제2정규형, 제3정규형, BC정규형과 각 정규형에 대한 특징과 정의에 따라 정규화를 진행하는 방법을 학습한다.</p>
+<h5 id="주요용어"><a href="#주요용어" class="headerlink" title="주요용어"></a>주요용어</h5><ul>
+<li><p>정규형: 삽입, 수정, 삭제 등의 이상 발생을 방지하기 위해 릴레이션과 속성을 재구성하기 위한 조건</p>
+</li>
+<li><p>함수적 종속성 다이어그램: 릴레이션 내의 속성 간의 종속 관계를 직관적이고 이해하기 쉽게 도식화한 표현 방식</p>
+</li>
+<li><p>무손실 분해: 정규화 과정에서 릴레이션을 두 그룹의 속성으로 분리할 때 분리된 릴레이션을 조인하여 원래의 릴레이션을 구성할 수 있는 분해</p>
+</li>
+<li><p>이행적 종속성: 속성 X, Y, Z에 대하여 X -&gt; Y이고 Y -&gt; Z이면 X -&gt; Z인 종속성</p>
 </li>
 </ul>
-<h2 id="기본-자료구조"><a href="#기본-자료구조" class="headerlink" title="기본 자료구조"></a>기본 자료구조</h2><ul>
-<li>좋은 프로그램은 주어진 문제에 적합한 자료구조와 효율적인 알고리즘을 사용한다.</li>
-<li>선형 자료구조(배열, 연결리스트, 스택, 큐) <-> 비선형 자료구조(트리, 그래프)</-></li>
-<li>배열 : 같은 자료형을 갖는 여러 원소를 하나의 변수이름으로 모아놓은 데이터의 집합<br>인덱스를 통한 직접적인 원소 접근 -&gt; 빠르고 동일한 접근 시간<br>삽입/삭제 시 추가적인 자료의 이동에 따른 시간적인 오버헤드 발생</li>
-<li>연결 리스트 -&gt; 데이터 필드와 링크 필드로 이루어진 노드라는 저장구조를 이용<br>비교적 간단한 삽입과 삭제 과정<br>순차적인 데이터 접근</li>
-<li>스택 : 한쪽 끝에서만 데이터의 삽입/삭제가 수행되는 선형 리스트<br>후입선출(LIFO), push 연산, pop 연산, top</li>
-<li>큐 : 선형 리스트의 한쪽 끝에서는 데이터의 삽입만 수행되고, 다른 한쪽 끝에서는 삭제만 수행되는 자료구조<br>선입선출(FIFO), front/head, rear/tail</li>
-<li>트리 : 하나 이상의 노드로 구성된 유한 집합 T</li>
-</ul>
+<p>결정자</p>
+<p>종속자</p>
+<p>x는 y에 종속된다.</p>
+<p>y는 결정자</p>
+<p>x는 종속자?</p>
+<p>정규화이 능사는 아니다.</p>
+<p>정규화대로 하면 테이블이 자잘하게 많아져서 사용자가 불편할 수 있기 때문에</p>
+<p>역정규화를  고려해야 하는 경우도 존재한다.</p>
+<p>대용량 데이터베이스에서 컬럼을 줄여도 공간 절약에 도움이 됨.</p>
+<p>Join 자체가 데이터베이스에 부하를 많이 주기 때문에 왠만하면 자제해야.</p>
+<p>부하냐, 용량 절약이냐, 사용성이냐의 고려 사항이 존재하는 듯.</p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>author: <a href="http://inakarune.github.io">SophiaY</a>
-            <p>url: <a href="http://inakarune.github.io/2019/01/23/알고리즘-소개/">http://inakarune.github.io/2019/01/23/알고리즘-소개/</a>
-            <p>date: <a href="http://inakarune.github.io/2019/01/23/알고리즘-소개/">January 23rd 2019, 8:46:58</a>
+            <p>url: <a href="http://inakarune.github.io/2019/05/14/Normal-Form/">http://inakarune.github.io/2019/05/14/Normal-Form/</a>
+            <p>date: <a href="http://inakarune.github.io/2019/05/14/Normal-Form/">May 14th 2019, 1:20:59</a>
             <!-- <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </div>
     
@@ -420,8 +425,8 @@ height:50vh;
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/01/20/SVG/" title= SVG >
-                    <div class="prevTitle">SVG</div>
+                <a href= "/2019/05/14/Query-and-Optimization/" title= Query and Optimization >
+                    <div class="prevTitle">Query and Optimization</div>
                 </a>
             
         </li>
@@ -529,7 +534,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#알고리즘-소개"><span class="toc-number">1.</span> <span class="toc-text">알고리즘 소개</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#알고리즘의-개념"><span class="toc-number">1.1.</span> <span class="toc-text">알고리즘의 개념</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#기본-자료구조"><span class="toc-number">1.2.</span> <span class="toc-text">기본 자료구조</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#6강-정규형의-적용"><span class="toc-number">1.</span> <span class="toc-text">6강. 정규형의 적용</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#학습목표"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">학습목표</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#주요용어"><span class="toc-number">1.0.0.0.2.</span> <span class="toc-text">주요용어</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -1061,7 +1066,345 @@ top:50vh;
     
     
     
-    <div class="total-archive"> Total : 37 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 57 </div>
     
     <div class="post-archive">
     
@@ -1073,7 +1416,107 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/23</span><a class="archive-post-title" href= "/2019/01/23/알고리즘-소개/" >알고리즘 소개</a>
+            <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/Hashing-and-Special-Index/" >Hashing and Special Index</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/Normal-Form/" >Normal Form</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/Query-and-Optimization/" >Query and Optimization</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/BOM/" >BOM</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Function-and-Operators/" >Function and Operators</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Greedy-Algorithm/" >Greedy Algorithm</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/If-and-Loop/" >If and Loop</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Type-and-proccessor/" >Type and proccessor</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2019/05/12/Currency-Control/" >Currency Control</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2019/05/12/Sort-Algorithm/" >Sort Algorithm</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span><a class="archive-post-title" href= "/2019/05/03/Transaction/" >Transaction</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/01</span><a class="archive-post-title" href= "/2019/05/01/Recovery-System/" >Recovery System</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/28</span><a class="archive-post-title" href= "/2019/03/28/Javascript-Object/" >Javascript Object</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/28</span><a class="archive-post-title" href= "/2019/03/28/Javascript/" >Javascript</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2019/03/23/CSS-property-2/" >CSS property(2)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/23</span><a class="archive-post-title" href= "/2019/03/23/CSS-property/" >CSS property(1)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/19</span><a class="archive-post-title" href= "/2019/02/19/HTML-Summary/" >HTML Summary</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/19</span><a class="archive-post-title" href= "/2019/02/19/Database-Modeling/" >Database Modeling</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2019/01/28/About-Database/" >About Database</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/23</span><a class="archive-post-title" href= "/2019/01/23/Divide-And-Conquer-Algorithm/" >Divide And Conquer Algorithm</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/23</span><a class="archive-post-title" href= "/2019/01/23/Algorithm Introduction/" >알고리즘 소개</a>
         </li>
     
     
@@ -1127,17 +1570,17 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/apply-bind-call/" >apply, bind, call</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
         </li>
     
     
@@ -1222,22 +1665,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Kotlin-Basic/" >Kotlin Basic</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Weapons-of-Jank-Destruction/" >Weapons of Jank Destruction</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/App-Lifecycles/" >App Lifecycles</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
         </li>
     
     
@@ -1252,12 +1685,17 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Weapons-of-Jank-Destruction/" >Weapons of Jank Destruction</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/hello-world/" >Hello World</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/App-Lifecycles/" >App Lifecycles</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
         </li>
     
     
@@ -1265,12 +1703,27 @@ top:50vh;
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/1/" >에라이</a>
         </li>
     
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/hello-world/" >Hello World</a>
+        </li>
+    
     </div>
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="Database"><span class="iconfont-archer">&#xe606;</span>Database</span>
+    
+        <span class="sidebar-tag-name" data-tags="Algorithm"><span class="iconfont-archer">&#xe606;</span>Algorithm</span>
+    
+        <span class="sidebar-tag-name" data-tags="BOM"><span class="iconfont-archer">&#xe606;</span>BOM</span>
+    
         <span class="sidebar-tag-name" data-tags="CSS"><span class="iconfont-archer">&#xe606;</span>CSS</span>
+    
+        <span class="sidebar-tag-name" data-tags="C Programming"><span class="iconfont-archer">&#xe606;</span>C Programming</span>
+    
+        <span class="sidebar-tag-name" data-tags="HTML"><span class="iconfont-archer">&#xe606;</span>HTML</span>
     
         <span class="sidebar-tag-name" data-tags="html"><span class="iconfont-archer">&#xe606;</span>html</span>
     
@@ -1321,15 +1774,23 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
+        <span class="sidebar-category-name" data-categories="Database"><span class="iconfont-archer">&#xe60a;</span>Database</span>
+    
+        <span class="sidebar-category-name" data-categories="Algorithm"><span class="iconfont-archer">&#xe60a;</span>Algorithm</span>
+    
+        <span class="sidebar-category-name" data-categories="javascript"><span class="iconfont-archer">&#xe60a;</span>javascript</span>
+    
         <span class="sidebar-category-name" data-categories="CSS"><span class="iconfont-archer">&#xe60a;</span>CSS</span>
+    
+        <span class="sidebar-category-name" data-categories="C-Programming"><span class="iconfont-archer">&#xe60a;</span>C-Programming</span>
+    
+        <span class="sidebar-category-name" data-categories="HTML"><span class="iconfont-archer">&#xe60a;</span>HTML</span>
     
         <span class="sidebar-category-name" data-categories="html"><span class="iconfont-archer">&#xe60a;</span>html</span>
     
         <span class="sidebar-category-name" data-categories="aws"><span class="iconfont-archer">&#xe60a;</span>aws</span>
     
         <span class="sidebar-category-name" data-categories="kotlin"><span class="iconfont-archer">&#xe60a;</span>kotlin</span>
-    
-        <span class="sidebar-category-name" data-categories="javascript"><span class="iconfont-archer">&#xe60a;</span>javascript</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
