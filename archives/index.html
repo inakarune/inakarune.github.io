@@ -336,13 +336,35 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2019/11/19/mongodb-timeout-problem-in-heroku/" >
+            <a class="abstract-title" href = "/2019/11/20/Navigator/" >
+                
+                    <span>Navigator</span>
+            </a>
+            <div class="abstract-content">
+                전회사에서 모바일에서만 작동하기 위해 navigator를 이용해서 모바일에만 반응했지만 내가 읽은 책에서는 navigator로 구분하는 게 bad practice라고 했다. 이번에도 일하면서 navigator를 사용해야 할 것 같아 쓰려다가 방법을 바꿔서 다행히 쓰진 않았지만 선례가 떠올라서 복습 겸 적어본다.
+navigator가 아니라 클라이언트 탐지를 할 때 브라우저 탐지를 마지막으로 고려해야 한다.처음에는 기능 탐지 그 다음은 쿽스 탐지가 되는 게 좋다.
+쿽스 탐지는 뭔가 동작하지 않는 것을 찾아내녀 하는 것이다.
+출처:...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/20</span>
+                </div>
+                <!-- tags  -->
+                
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2019/11/19/Mongodb-timeout-problem-in-heroku/" >
                 
                     <span>Mongodb timeout problem in heroku</span>
             </a>
             <div class="abstract-content">
-                heroku에서 nodejs를 서버로 이용하려는데 자꾸 이상하게 503 error가 뜨더랬다.처음에는 cors 문제인가 싶어서 cor 모듈을 쓰지 않고 직접 쓰기도 했고 cors 모듈을 설치해보기도 했지만 계속 503이 떴다.이상해서 로그를 살펴보게 되었는데 mongodb connection error timeout 3000 어쩌구 저쩌구였다.로컬에서는 잘만 되었기에 미친듯이 찾아본 결과 보안상 화이트리스트에 0.0.0.0 을 넣고 몽구스 파라미터에 옵션값을 더 추가해서 하니 되었다!api 서버가 무사히 동작하니 뿌듯!
-
+                heroku에서 nodejs를 서버로 이용하려는데 자꾸 이상하게 503 error가 뜨더랬다.처음에는 cors 문제인가 싶어서 cor 모듈을 쓰지 않고 직접 쓰기도 했고 cors 모듈을 설치해보기도 했지만 계속 503이 떴다.이상해서 heroku 로그를 살펴보게 되었는데 mongodb connection error timeout 3000 어쩌구 저쩌구였다.로컬에서는 잘만 되었기에 미친듯이 찾아본 결과 mongodb cluster 보안상 ip 화이트리스트에 0.0.0.0 을 넣고 몽구스 파라미터에 옵션값을 더 추가해서 하니 되었...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -606,39 +628,6 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
                 <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Algorithm">Algorithm</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2019/05/12/Currency-Control/" >
-                
-                    <span>Currency Control</span>
-            </a>
-            <div class="abstract-content">
-                #13강. 동시성 제어
-학습목표
-트랜잭션 간 연산 순서를 제어하여 데이터의 무결성을 유지하면서 동시 실행하는 트랜잭션의 수를 최대한으로 높이기 위한 락 기반 규약, 타임스탬프 기반 규악, 검증 기반 규약 등 다양한 동시성 제어 기법에 대하여 학습한다.
-주요용어
-
-양립성 함수: 락의 종류에 따라 동시에 수락될 수 있는지 판단하는 함수
-2단계 락킹 규약: 요청 단계에서 트랜잭션은 락을 추가 요청할 수 있으며, 반납 단계 부터는 락을 반납만 해야 하는 방식으로 직렬성을 보장하는 규약
-토마스 기록 규칙: 타임스탬프 기반 규약의 규칙으...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/12</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Database">Database</a>
     
 </div>
                 
@@ -1652,7 +1641,42 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
     
     
     
-    <div class="total-archive"> Total : 58 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 59 </div>
     
     <div class="post-archive">
     
@@ -1664,17 +1688,22 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/19</span><a class="archive-post-title" href= "/2019/11/19/mongodb-timeout-problem-in-heroku/" >Mongodb timeout problem in heroku</a>
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2019/11/20/Navigator/" >Navigator</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/BOM/" >BOM</a>
+            <span class="archive-post-date">11/19</span><a class="archive-post-title" href= "/2019/11/19/Mongodb-timeout-problem-in-heroku/" >Mongodb timeout problem in heroku</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/Hashing-and-Special-Index/" >Hashing and Special Index</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/BOM/" >BOM</a>
         </li>
     
     
@@ -1689,7 +1718,7 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Type-and-proccessor/" >Type and proccessor</a>
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Function-and-Operators/" >Function and Operators</a>
         </li>
     
     
@@ -1704,17 +1733,17 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Function-and-Operators/" >Function and Operators</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2019/05/12/Sort-Algorithm/" >Sort Algorithm</a>
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Type-and-proccessor/" >Type and proccessor</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2019/05/12/Currency-Control/" >Currency Control</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2019/05/12/Sort-Algorithm/" >Sort Algorithm</a>
         </li>
     
     
@@ -1823,12 +1852,12 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
         </li>
     
     
@@ -1858,7 +1887,7 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >CSS</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
         </li>
     
     
@@ -1868,7 +1897,7 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >CSS</a>
         </li>
     
     
@@ -1918,17 +1947,27 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Kotlin-Basic/" >Kotlin Basic</a>
         </li>
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/About-responsive-web/" >About responsive web</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/App-Lifecycles/" >App Lifecycles</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
         </li>
     
     
@@ -1943,22 +1982,12 @@ C 언어의 변수와 변수 선언에 대한 의미를 이해할 수 있다.
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/About-responsive-web/" >About responsive web</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/1/" >에라이</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/hello-world/" >Hello World</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/1/" >에라이</a>
         </li>
     
     </div>

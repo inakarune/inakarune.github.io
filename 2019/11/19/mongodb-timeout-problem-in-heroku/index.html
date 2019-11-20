@@ -383,21 +383,27 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>heroku에서 nodejs를 서버로 이용하려는데 자꾸 이상하게 503 error가 뜨더랬다.<br>처음에는 cors 문제인가 싶어서 cor 모듈을 쓰지 않고 직접 쓰기도 했고 cors 모듈을 설치해보기도 했지만 계속 503이 떴다.<br>이상해서 로그를 살펴보게 되었는데 mongodb connection error timeout 3000 어쩌구 저쩌구였다.<br>로컬에서는 잘만 되었기에 미친듯이 찾아본 결과 보안상 화이트리스트에 0.0.0.0 을 넣고 몽구스 파라미터에 옵션값을 더 추가해서 하니 되었다!<br>api 서버가 무사히 동작하니 뿌듯!</p>
+        <p>heroku에서 nodejs를 서버로 이용하려는데 자꾸 이상하게 503 error가 뜨더랬다.<br>처음에는 cors 문제인가 싶어서 cor 모듈을 쓰지 않고 직접 쓰기도 했고 cors 모듈을 설치해보기도 했지만 계속 503이 떴다.<br>이상해서 heroku 로그를 살펴보게 되었는데 mongodb connection error timeout 3000 어쩌구 저쩌구였다.<br>로컬에서는 잘만 되었기에 미친듯이 찾아본 결과 mongodb cluster 보안상 ip 화이트리스트에 0.0.0.0 을 넣고 몽구스 파라미터에 옵션값을 더 추가해서 하니 되었다!<br>api 서버가 무사히 동작하니 뿌듯!</p>
+<p>추가로 mlab을 더이상 운영안하고 cluster로만 한다는 걸 뒤늦게 깨달아서 바보같이 mlab 타령만 했다 ㅠ</p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>author: <a href="http://inakarune.github.io">SophiaY</a>
-            <p>url: <a href="http://inakarune.github.io/2019/11/19/mongodb-timeout-problem-in-heroku/">http://inakarune.github.io/2019/11/19/mongodb-timeout-problem-in-heroku/</a>
-            <p>date: <a href="http://inakarune.github.io/2019/11/19/mongodb-timeout-problem-in-heroku/">November 19th 2019, 9:48:10</a>
+            <p>url: <a href="http://inakarune.github.io/2019/11/19/Mongodb-timeout-problem-in-heroku/">http://inakarune.github.io/2019/11/19/Mongodb-timeout-problem-in-heroku/</a>
+            <p>date: <a href="http://inakarune.github.io/2019/11/19/Mongodb-timeout-problem-in-heroku/">November 19th 2019, 9:48:10</a>
             <!-- <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p> -->
         </div>
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2019/11/20/Navigator/" title= Navigator >
+                    <div class="nextTitle">Navigator</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -1441,7 +1447,42 @@ top:50vh;
     
     
     
-    <div class="total-archive"> Total : 58 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 59 </div>
     
     <div class="post-archive">
     
@@ -1453,17 +1494,22 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/19</span><a class="archive-post-title" href= "/2019/11/19/mongodb-timeout-problem-in-heroku/" >Mongodb timeout problem in heroku</a>
+            <span class="archive-post-date">11/20</span><a class="archive-post-title" href= "/2019/11/20/Navigator/" >Navigator</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/BOM/" >BOM</a>
+            <span class="archive-post-date">11/19</span><a class="archive-post-title" href= "/2019/11/19/Mongodb-timeout-problem-in-heroku/" >Mongodb timeout problem in heroku</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/Hashing-and-Special-Index/" >Hashing and Special Index</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/14</span><a class="archive-post-title" href= "/2019/05/14/BOM/" >BOM</a>
         </li>
     
     
@@ -1478,7 +1524,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Type-and-proccessor/" >Type and proccessor</a>
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Function-and-Operators/" >Function and Operators</a>
         </li>
     
     
@@ -1493,17 +1539,17 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Function-and-Operators/" >Function and Operators</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2019/05/12/Sort-Algorithm/" >Sort Algorithm</a>
+            <span class="archive-post-date">05/13</span><a class="archive-post-title" href= "/2019/05/13/Type-and-proccessor/" >Type and proccessor</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2019/05/12/Currency-Control/" >Currency Control</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span><a class="archive-post-title" href= "/2019/05/12/Sort-Algorithm/" >Sort Algorithm</a>
         </li>
     
     
@@ -1612,12 +1658,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/basic/" >Basic</a>
+            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2018/09/15/Arguments/" >Arguments</a>
         </li>
     
     
@@ -1647,7 +1693,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >CSS</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
         </li>
     
     
@@ -1657,7 +1703,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/Cross-browsing-css/" >Cross-browsing-css</a>
+            <span class="archive-post-date">08/15</span><a class="archive-post-title" href= "/2018/08/15/css/" >CSS</a>
         </li>
     
     
@@ -1707,17 +1753,27 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/Kotlin-Basic/" >Kotlin Basic</a>
         </li>
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/How-to-deploy-web-app-in-aws/" >How to deploy web app in aws</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/About-responsive-web/" >About responsive web</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/App-Lifecycles/" >App Lifecycles</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
         </li>
     
     
@@ -1732,22 +1788,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/new-angular-project/" >New Angular Project</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/About-responsive-web/" >About responsive web</a>
+            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/1/" >에라이</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/hello-world/" >Hello World</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/15</span><a class="archive-post-title" href= "/2018/05/15/1/" >에라이</a>
         </li>
     
     </div>
